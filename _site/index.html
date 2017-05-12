@@ -86,7 +86,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="fa fa-lg fa-home navbar-brand" href="index.html"><span class="projectTitle"> IBM Cloud Object Storage Documentation</span></a>
+            <a class="fa fa-lg fa-home navbar-brand" href="index.html"><span class="projectTitle"> IBM Cloud Object Storage Documentation (Staging)</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -428,18 +428,17 @@
 
     
 
-  <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> “IBM Cloud Object Storage (US Cross Region) is now offering a limited Free Tier for new and existing customers with <a href="https://www.ibm.com/cloud-computing/bluemix/cloud-object-storage">promotional code <code class="highlighter-rouge">COSFREE</code></a>.”</div>
+  <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> “IBM Cloud Object Storage is now offering a limited Free Tier for new and existing customers with <a href="https://www.ibm.com/cloud-computing/bluemix/cloud-object-storage">promotional code <code class="highlighter-rouge">COSFREE</code></a>.”</div>
 
-<h3 id="ibm-cos-cross-region">IBM COS Cross Region</h3>
-<p>Information stored with IBM COS Cross Region is encrypted and dispersed across three geographic regions (Dallas, San Jose, and Washington, DC) and accessed through an implementation of the S3 API. This is the first public cloud storage service that makes use of the distributed storage technologies provided by IBM’s Cloud Object Storage System.</p>
+<p>Information stored with IBM Cloud Object Storage is encrypted and dispersed across multiple geographic locations, and accessed through an implementation of the S3 API. This service makes use of the distributed storage technologies provided by IBM’s Cloud Object Storage System.</p>
 
-<p>Cross Region service provides higher durability and availability than using a single region at the cost of slightly higher latency.  If a given data center is unavailable, the object store continues to function without impediment, and any missed changes are applied when the data center comes back online.</p>
+<p>Cross Region service provides higher durability and availability than using a single region at the cost of slightly higher latency. Regional service reverses those tradeoffs, and distributes objects across multiple availability zones within a single region. If a given region or availability zone is unavailable, the object store continues to function without impediment, and any missed changes are applied when the data center comes back online.</p>
 
 <p>Developers use IBM COS’s implementation of the S3 API to interact with their storage accounts. This documentation provides support to get started with provisioning accounts, to create buckets, to upload objects, and to use a reference of common API interactions. This offering is managed through the IBM Bluemix Infrastructure (formerly SoftLayer) Control portal.</p>
 
 <h3 id="other-ibm-object-storage-services">Other IBM object storage services</h3>
 
-<p>In addition to COS Cross Region, IBM Cloud currently provides two additional object storage offerings for different user needs, all of which are accessible through web-based portals and RESTful APIs.</p>
+<p>In addition to COS, IBM Cloud currently provides two additional object storage offerings for different user needs, all of which are accessible through web-based portals and REST APIs.</p>
 
 <table class="overviewtable">
   <thead>
@@ -451,12 +450,12 @@
   </thead>
   <tbody>
     <tr>
-      <td>IBM COS Cross Region</td>
+      <td>IBM Cloud Object Storage</td>
       <td>S3 API</td>
       <td>– Highest availability, durability and resiliency<br /> – Encryption at rest and in flight</td>
     </tr>
     <tr>
-      <td>Cloud Object Storage Regional</td>
+      <td>OpenStack Swift Object Storage</td>
       <td>Swift API</td>
       <td>– Native integration with OpenStack clouds <br /> – Choice of 20 geographic regions</td>
     </tr>
@@ -468,9 +467,9 @@
   </tbody>
 </table>
 
-<h4 id="cloud-object-storage-regional">Cloud Object Storage Regional</h4>
+<h4 id="openstack-swift-object-storage">OpenStack Swift Object Storage</h4>
 
-<p>Information stored with IBM COS Regional is located in one of 20 global data centers. Based on the OpenStack Swift platform, developers use the community Swift API to interact with their storage accounts. This offering is managed through the IBM Bluemix Infrastructure Control portal and does not provide encryption at-rest.</p>
+<p>Information stored with OpenStack Swift Object Storage is located in one of 20 global data centers. Developers use the community Swift API to interact with their storage accounts. This offering is managed through the IBM Bluemix Infrastructure Control portal and does not provide encryption at-rest.</p>
 
 <h4 id="object-storage-for-ibm-bluemix-developer-services">Object Storage for IBM Bluemix Developer Services</h4>
 
@@ -501,7 +500,7 @@
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 IBM. <a href="/crs-docs/notices.html">Notices.</a> All rights reserved. <br />
- Site last generated: Apr 28, 2017 <br /><br />
+ Site last generated: May 12, 2017 <br /><br />
 <p> &nbsp; <img src="images/cos_logo.svg" alt="Company logo" style="width:100px;"/></p>
                 </div>
             </div>

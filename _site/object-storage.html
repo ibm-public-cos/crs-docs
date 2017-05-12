@@ -86,7 +86,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="fa fa-lg fa-home navbar-brand" href="index.html"><span class="projectTitle"> IBM Cloud Object Storage Documentation</span></a>
+            <a class="fa fa-lg fa-home navbar-brand" href="index.html"><span class="projectTitle"> IBM Cloud Object Storage Documentation (Staging)</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -434,7 +434,7 @@
 
 <ul>
   <li>
-    <p>Managing data at scale by using conventional block and file systems was difficult because these technologies lead to data islands due to limitations on various levels of the data management hardware and software stack.</p>
+    <p>Managing data at very large scales using conventional block and file systems was difficult because these technologies lead to data islands due to limitations on various levels of the data management hardware and software stack.</p>
   </li>
   <li>
     <p>Managing namespace at scale resulted in maintaining large and complex hierarchies, which are required to access the data. Limitations in nested structures on traditional block and file storage arrays further contributed to data islands being formed.</p>
@@ -454,14 +454,14 @@
     <p>Metadata: This is the data about the data. It includes some predefined attributes such as upload time and size. Object storage allows users to include custom metadata containing any information in key and value pairs. This information typically contains information that is pertinent to the user or application that is storing the data and can be amended at any time. A unique aspect to metadata handling in object storage systems is that metadata is stored with the object.</p>
   </li>
   <li>
-    <p>A universally unique identifier (UUID): This ID is assigned to every object in an OBS system. This UUID allows the object storage system to differentiate objects from one another and is used to find the data without needing to know the exact physical drive, array, or site where the data is.</p>
+    <p>Key: A unique resource identifier is assigned to every object in an OBS system. This key allows the object storage system to differentiate objects from one another and is used to find the data without needing to know the exact physical drive, array, or site where the data is.</p>
   </li>
 </ul>
 
 <p>This approach allows object storage to store data in a simple, flat hierarchy, which alleviates the need for large,
-performance-inhibiting metadata repositories that are a choke point for many large, file-based solutions.</p>
+performance-inhibiting metadata repositories.</p>
 
-<p>Data access is achieved by using a REST interface over the HTTP protocol, which allows anywhere and anytime access simply by referencing the object ID. The file name of the original data is maintained as a key part of the object metadata, so it can also be used for object access in some object implementations.</p>
+<p>Data access is achieved by using a REST interface over the HTTP protocol, which allows anywhere and anytime access simply by referencing the object key.</p>
 
 
     <div class="tags">
@@ -478,7 +478,7 @@ performance-inhibiting metadata repositories that are a choke point for many lar
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 IBM. <a href="/crs-docs/notices.html">Notices.</a> All rights reserved. <br />
-<span>Page last updated:</span> November 18, 2016<br/> Site last generated: Apr 28, 2017 <br /><br />
+<span>Page last updated:</span> November 18, 2016<br/> Site last generated: May 12, 2017 <br /><br />
 <p> &nbsp; <img src="images/cos_logo.svg" alt="Company logo" style="width:100px;"/></p>
                 </div>
             </div>
