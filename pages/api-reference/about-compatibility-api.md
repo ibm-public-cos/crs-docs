@@ -34,6 +34,8 @@ The only operation that is performed directly at the account level is to get a l
 
 These operations create, destroy, get information about, and control behavior of buckets.
 
+{% include note.html content="Note that the 'version 2' method of listing objects within a bucket is not supported, and the 'version 1' syntax is needed." %}
+
 | Bucket operation | Note |
 |:----|:---|
 | `DELETE` Bucket | Deletes an empty bucket.   |

@@ -397,14 +397,26 @@ Content-Length: 0
 
 #### List objects in a given bucket
 
-When a `GET` request is given to a specific container, a list of the contents are returned.  This listing is limited to the first 1,000 objects.
+A `GET` request addressed to a bucket returns a list of objects, limited to 1,000 at a time and returned in non-lexographical order. The `StorageClass` value that is returned in the response is a default value as storage class operations are not implemented in COS. This operation does not make use of operation specific headers or payload elements.
 
 ##### Syntax
+
+{% include note.html content="Note that the 'version 2' method of listing objects within a bucket is not supported, and the 'version 1' syntax is needed." %}
 
 ```bash
 GET https://{endpoint}/{bucket-name} # path style
 GET https://{bucket-name}.{endpoint} # virtual host style
 ```
+
+##### Optional query parameters
+
+Name | Type | Description
+--- | ---- | ------------
+`prefix` | string | Constrains response to object names beginning with `prefix`.
+`delimiter` | string | Groups objects between the `prefix` and the `delimiter`.
+`encoding-type` | string | If unicode characters that are not supported by XML are used in an object name, this parameter can be set to `url` to properly encode the response.
+`max-keys` | string | Restricts the number of objects to display in the response.  Default and maximum is 1,000.
+`marker` | string | Specifies the object from where the listing should begin, in UTF-8 binary order.
 
 ##### Sample request
 
