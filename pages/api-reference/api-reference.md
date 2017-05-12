@@ -1,9 +1,9 @@
 ---
 title: API reference
-keywords: 
+keywords:
 last_updated: November 18, 2016
-tags: 
-summary: 
+tags:
+summary:
 sidebar: crs_api_sidebar
 permalink: api-reference
 redirect_from:
@@ -32,7 +32,7 @@ The following table describes supported common request headers. Headers not list
 |x-amz-content-sha256| **Required** for uploading objects or any request with information in the body. |
 | Content-Length     | **Required** for uploading objects, chunked encoding also supported.    |
 | Content-MD5        | A 128-bit MD5 hash value of the message being sent.                  |
-| Expect             | `100-continue` waits for the headers to be accepted before sending the body.  | 
+| Expect             | `100-continue` waits for the headers to be accepted before sending the body.  |
 {:.opstable}
 
 #### Common Response Headers
@@ -41,9 +41,9 @@ The following table describes common response headers.
 |  Header        | Note |
 |----------------|------|
 | Content-Length | The length of the request body in bytes.      |
-|Connection     |  Indicates whether the connection is open or closed.     | 
+|Connection     |  Indicates whether the connection is open or closed.     |
 | Date           | Timestamp of the request.     |
-| Server         | Name of the responding server.     | 
+| Server         | Name of the responding server.     |
 |X-Clv-Request-Id|  Unique identifier generated per request. |
 {:.opstable}
 
@@ -100,7 +100,7 @@ Authorization: {authorization-string}
 </ListAllMyBucketsResult>
 ```
 
----- 
+----
 
 #### View the storage class of buckets belonging to an account
 
@@ -156,7 +156,7 @@ Authorization: {authorization-string}
 </ListAllMyBucketsResult>
 ```
 
----- 
+----
 
 ### Operations on Buckets
 {: #operations-on-buckets}
@@ -199,13 +199,13 @@ x-amz-request-id: dca204eb-72b5-4e2a-a142-808d2a5c2a87
 Content-Length: 0
 ```
 
----- 
+----
 
 #### Create a Vault bucket
 
-To create a Vault bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `us-vault` in the body of a `PUT` request to a bucket endpoint.  Note that standard bucket [naming rules]({{ site.baseurl }}/api-reference#create-a-new-bucket) apply. 
+To create a Vault bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `us-vault` in the body of a `PUT` request to a bucket endpoint.  Note that standard bucket [naming rules]({{ site.baseurl }}/api-reference#create-a-new-bucket) apply.
 
-{% include note.html content="Unlike AWS S3, IBM COS uses the `LocationConstraint` value to indicate the storage class of an object. This field has no relation to physical geography or region - those values are provided within the endpoint used to connect to the service. Currently, the only permitted values for `LocationCostraint` are `us-standard`, `us-vault`, and `us-cold`." %}
+{% include custom/locations.md %}
 
 ##### Syntax
 
@@ -215,9 +215,9 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 ```
 
 ```xml
-<CreateBucketConfiguration> 
-  <LocationConstraint>us-vault</LocationConstraint> 
-</CreateBucketConfiguration> 
+<CreateBucketConfiguration>
+  <LocationConstraint>us-vault</LocationConstraint>
+</CreateBucketConfiguration>
 ```
 
 ##### Sample request
@@ -234,9 +234,9 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 Content-Length: 110
 ```
 ```xml
-<CreateBucketConfiguration> 
-  <LocationConstraint>us-vault</LocationConstraint> 
-</CreateBucketConfiguration> 
+<CreateBucketConfiguration>
+  <LocationConstraint>us-vault</LocationConstraint>
+</CreateBucketConfiguration>
 ```
 
 ##### Sample response
@@ -251,13 +251,13 @@ X-Clv-S3-Version: 2.5
 Content-Length: 0
 ```
 
----- 
+----
 
 #### Create a Cold Vault bucket
 
-To create a Vault bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `us-cold` in the body of a `PUT` request to a bucket endpoint.  Note that standard bucket [naming rules]({{ site.baseurl }}/api-reference#create-a-new-bucket) apply. 
+To create a Vault bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `us-cold` in the body of a `PUT` request to a bucket endpoint.  Note that standard bucket [naming rules]({{ site.baseurl }}/api-reference#create-a-new-bucket) apply.
 
-{% include note.html content="Unlike AWS S3, IBM COS uses the `LocationConstraint` value to indicate the storage class of an object. This field has no relation to physical geography or region - those values are provided within the endpoint used to connect to the service. Currently, the only permitted values for `LocationCostraint` are `us-standard`, `us-vault`, and `us-cold`." %}
+{% include custom/locations.md %}
 
 ##### Syntax
 
@@ -267,9 +267,9 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 ```
 
 ```xml
-<CreateBucketConfiguration> 
-  <LocationConstraint>us-cold</LocationConstraint> 
-</CreateBucketConfiguration> 
+<CreateBucketConfiguration>
+  <LocationConstraint>us-cold</LocationConstraint>
+</CreateBucketConfiguration>
 ```
 
 ##### Sample request
@@ -286,9 +286,9 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 Content-Length: 110
 ```
 ```xml
-<CreateBucketConfiguration> 
-  <LocationConstraint>us-cold</LocationConstraint> 
-</CreateBucketConfiguration> 
+<CreateBucketConfiguration>
+  <LocationConstraint>us-cold</LocationConstraint>
+</CreateBucketConfiguration>
 ```
 
 ##### Sample response
@@ -303,7 +303,59 @@ X-Clv-S3-Version: 2.5
 Content-Length: 0
 ```
 
----- 
+----
+
+#### Create a Flex bucket
+
+To create a Flex bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `us-flex` in the body of a `PUT` request to a bucket endpoint.  Note that standard bucket [naming rules]({{ site.baseurl }}/api-reference#create-a-new-bucket) apply.
+
+{% include custom/locations.md %}
+
+##### Syntax
+
+```shell
+PUT https://{endpoint}/{bucket-name} # path style
+PUT https://{bucket-name}.{endpoint} # virtual host style
+```
+
+```xml
+<CreateBucketConfiguration>
+  <LocationConstraint>us-flex</LocationConstraint>
+</CreateBucketConfiguration>
+```
+
+##### Sample request
+
+This is an example of creating a new bucket called 'flex-images'.
+
+```http
+PUT /flex-images HTTP/1.1
+Authorization: {authorization-string}
+x-amz-date: 20170317T175217Z
+x-amz-content-sha256: {hashed-request-body}
+Content-Type: text/plain
+Host: s3-api.us-geo.objectstorage.softlayer.net
+Content-Length: 110
+```
+```xml
+<CreateBucketConfiguration>
+  <LocationConstraint>us-flex</LocationConstraint>
+</CreateBucketConfiguration>
+```
+
+##### Sample response
+
+```http
+HTTP/1.1 200 OK
+Date: Fri, 17 Mar 2017 17:52:17 GMT
+X-Clv-Request-Id: b6483b2c-24ae-488a-884c-db1a93b9a9a6
+Accept-Ranges: bytes
+Server: Cleversafe/3.9.0.115
+X-Clv-S3-Version: 2.5
+Content-Length: 0
+```
+
+----
 
 #### Retrieve a bucket's headers
 
@@ -341,7 +393,7 @@ x-amz-request-id: 0c2832e3-3c51-4ea6-96a3-cd8482aca08a
 Content-Length: 0
 ```
 
----- 
+----
 
 #### List objects in a given bucket
 
@@ -423,7 +475,7 @@ Content-Length: 909
 </ListBucketResult>
 ```
 
----- 
+----
 
 #### Delete a bucket
 
@@ -470,7 +522,7 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 </Error>
 ```
 
----- 
+----
 
 #### Create an access control list for a bucket
 
@@ -479,6 +531,8 @@ A `PUT` issued to a bucket with the proper parameters creates an access control 
 {% include important.html content="Credentials are generated for each storage account, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a given user, only to a storage account. However, `public-read-write` allows any other COS storage account to access the resource, as well as the general public. " %}
 
 ACLs can use pre-made permissions sets (or 'canned ACLs') or be customized in the body of the request. Pre-made ACLs are specified using the `x-amz-acl` header with `private`, `public-read`, or `public-read-write` as the value. Custom ACLs are specified using XML in the request body and can grant `READ`, `WRITE`, `READ_ACP` (read ACL), `WRITE_ACP` (write ACL), or `FULL_CONTROL` permissions to a given storage account.
+
+{% include note.html content="`READ` access, including `public-read`, when granted on a bucket does not allow for the actual access of objects themselves, only the ability to list them." %}
 
 ##### Syntax
 
@@ -489,7 +543,7 @@ PUT https://{bucket-name}.{endpoint}?acl= # virtual host style
 
 ##### Sample request Basic pre-made ACL
 
-This is an example of specifying a pre-made ACL to allow for `public-read` access to the "apiary" bucket. This allows any storage account to view the bucket's contents and ACL, and to access objects.
+This is an example of specifying a pre-made ACL to allow for `public-read` access to the "apiary" bucket. This allows any storage account to view the bucket's contents and ACL details.
 
 ```http
 PUT /apiary?acl= HTTP/1.1
@@ -514,7 +568,7 @@ Content-Length: 0
 
 ##### Sample request Custom ACL
 
-This is an example of specifying a custom ACL to allow for another account to view the ACL for the "apiary" bucket, but not to view or access objects stored inside the bucket. Additionally, a third account is given full access to the same bucket as another element of the same ACL.
+This is an example of specifying a custom ACL to allow for another account to view the ACL for the "apiary" bucket, but not to list objects stored inside the bucket. Additionally, a third account is given full access to the same bucket as another element of the same ACL.
 
 ```http
 PUT /apiary?acl= HTTP/1.1
@@ -560,7 +614,7 @@ X-Clv-S3-Version: 2.5
 x-amz-request-id: 73d3cd4a-ff1d-4ac9-b9bb-43529b11356a
 ```
 
----- 
+----
 
 #### Retrieve the access control list for a bucket
 
@@ -616,7 +670,7 @@ Content-Length: 550
 </AccessControlPolicy>
 ```
 
----- 
+----
 
 #### List canceled/incomplete multipart uploads for a bucket
 
@@ -639,7 +693,7 @@ Name | Type | Description
 `max-uploads` | integer | Restricts the number of objects to display in the response.  Default and maximum is 1,000.
 `key-marker` | string | Specifies from where the listing should begin.
 `upload-id-marker` | string | Ignored if `key-marker` is not specified, otherwise sets a point at which to begin listing parts above `upload-id-marker`.
- 
+
 ##### Sample request
 
 This is an example of retrieving all current canceled and incomplete multipart uploads.
@@ -705,7 +759,7 @@ Content-Length: 374
 </ListMultipartUploadsResult>
 ```
 
----- 
+----
 
 #### List any cross-origin resource sharing configuration for a bucket
 
@@ -747,7 +801,7 @@ Content-Length: 123
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/"/>
 ```
 
----- 
+----
 
 #### Create a cross-origin resource sharing configuration for a bucket
 
@@ -799,7 +853,7 @@ x-amz-request-id: 7afca6d8-e209-4519-8f2c-1af3f1540b42
 Content-Length: 0
 ```
 
----- 
+----
 
 #### Delete any cross-origin resource sharing configuration for a bucket
 
@@ -825,14 +879,14 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 
 The server responds with `204 No Content`.
 
----- 
+----
 
 ### Operations on Objects
 {: #operations-on-objects}
 
 #### Upload an object
 
-A `PUT` given a path to an object uploads the request body as an object. A SHA256 hash of the object is a required header.  There is no maximum object size when using a single streaming `PUT` upload, although it is estimated to be 50TB.
+A `PUT` given a path to an object uploads the request body as an object. A SHA256 hash of the object is a required header.  All objects are limited to 5TB in size.
 
 
 ##### Syntax
@@ -854,10 +908,10 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 
 Content-Length: 533
 
- The 'queen' bee is developed from larvae selected by worker bees and fed a 
- substance referred to as 'royal jelly' to accelerate sexual maturity. After a 
- short while the 'queen' is the mother of nearly every bee in the hive, and 
- the colony will fight fiercely to protect her. 
+ The 'queen' bee is developed from larvae selected by worker bees and fed a
+ substance referred to as 'royal jelly' to accelerate sexual maturity. After a
+ short while the 'queen' is the mother of nearly every bee in the hive, and
+ the colony will fight fiercely to protect her.
 
 ```
 
@@ -875,7 +929,7 @@ ETag: "3ca744fa96cb95e92081708887f63de5"
 Content-Length: 0
 ```
 
----- 
+----
 
 #### Get an object's headers
 
@@ -914,7 +968,7 @@ Last-Modified: Thu, 25 Aug 2016 17:49:06 GMT
 Content-Length: 11
 ```
 
----- 
+----
 
 #### Download an object
 
@@ -953,12 +1007,12 @@ Last-Modified: Thu, 25 Aug 2016 17:46:53 GMT
 Content-Length: 467
 
  Female bees that are not fortunate enough to be selected to be the 'queen'
- while they were still larvae become known as 'worker' bees. These bees lack 
- the ability to reproduce and instead ensure that the hive functions smoothly, 
+ while they were still larvae become known as 'worker' bees. These bees lack
+ the ability to reproduce and instead ensure that the hive functions smoothly,
  acting almost as a single organism in fulfilling their purpose.
 ```
 
----- 
+----
 
 #### Delete an object
 
@@ -992,7 +1046,7 @@ X-Clv-S3-Version: 2.5
 x-amz-request-id: 8ff4dc32-a6f0-447f-86cf-427b564d5855
 ```
 
----- 
+----
 
 #### Deleting multiple objects
 
@@ -1054,7 +1108,7 @@ Content-Length: 207
 </DeleteResult>
 ```
 
----- 
+----
 
 #### Copy an object
 
@@ -1080,7 +1134,7 @@ Header | Type | Description
 
 ##### Sample request
 
-This basic example takes the `bee` object from the `garden` bucket, and creates a copy in the `apiary` bucket with the new key `wild-bee`.  
+This basic example takes the `bee` object from the `garden` bucket, and creates a copy in the `apiary` bucket with the new key `wild-bee`.
 
 ```http
 PUT /apiary/wild-bee HTTP/1.1
@@ -1112,7 +1166,7 @@ Content-Length: 240
 </CopyObjectResult>
 ```
 
----- 
+----
 
 #### Retrieve an object's ACL
 
@@ -1167,7 +1221,7 @@ Content-Length: 550
 </AccessControlPolicy>
 ```
 
----- 
+----
 
 #### Create an ACL for an object
 
@@ -1190,6 +1244,31 @@ PUT https://{bucket-name}.{endpoint}/{object-name}?acl= # virtual host style
 
 ```http
 PUT /apiary/queen-bee?acl= HTTP/1.1
+Authorization: {authorization-string}
+x-amz-date: 20161207T162842Z
+x-amz-acl: public-read
+Host: s3-api.us-geo.objectstorage.softlayer.net
+```
+
+##### Sample response
+
+```http
+HTTP/1.1 200 OK
+Date: Wed, 07 Dec 2016 16:28:42 GMT
+X-Clv-Request-Id: b8dea44f-af20-466d-83ec-2a8563f1617b
+Accept-Ranges: bytes
+Server: Cleversafe/3.9.0.137
+X-Clv-S3-Version: 2.5
+x-amz-request-id: b8dea44f-af20-466d-83ec-2a8563f1617b
+Content-Length: 0
+```
+
+##### Sample request (canned ACL in header)
+
+It is also possible to assign a canned ACL directly when uploading an object by passing the `x-amz-acl` header and a canned ACL value.  This example makes the `queen-bee` object publicly and anonymously accessible.
+
+```http
+PUT /apiary/queen-bee HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20161207T162842Z
 x-amz-acl: public-read
@@ -1261,7 +1340,7 @@ x-amz-request-id: ef02ea42-6fa6-4cc4-bec4-c59bc3fcc9f7
 Content-Length: 0
 ```
 
----- 
+----
 
 #### Check an object's CORS configuration
 
@@ -1302,7 +1381,7 @@ Content-Length: 0
 
 ```
 
----- 
+----
 
 ### Uploading objects in multiple parts
 
@@ -1312,7 +1391,7 @@ Multipart uploads are only available for objects larger than 5MB. For objects sm
 
 {% include tip.html content="Using more than 500 parts leads to inefficiencies in IBM COS and should be avoided when possible." %}
 
-Due to the additional complexity involved, it is recommended that developers make use of S3 API libraries that provide multipart upload support. 
+Due to the additional complexity involved, it is recommended that developers make use of S3 API libraries that provide multipart upload support.
 
 {% include important.html content="Incomplete multipart uploads do persist until the object is deleted or the multipart upload is aborted with `AbortIncompleteMultipartUpload`. If an incomplete multipart upload is not aborted, the partial upload continues to use resources.  Interfaces should be designed with this point in mind, and clean up incomplete multipart uploads.  " %}
 
@@ -1363,7 +1442,7 @@ Content-Length: 276
 </InitiateMultipartUploadResult>
 ```
 
----- 
+----
 
 #### Upload a part
 
@@ -1400,11 +1479,11 @@ ETag: "7417ca8d45a71b692168f0419c17fe2f"
 Content-Length: 0
 ```
 
----- 
+----
 
 #### Complete a multipart upload
 
-A `POST` request issued to an object with query parameter `uploadId` and the appropriate XML block in the body will complete a multipart upload. 
+A `POST` request issued to an object with query parameter `uploadId` and the appropriate XML block in the body will complete a multipart upload.
 
 ##### Syntax
 
@@ -1469,11 +1548,11 @@ Content-Length: 364
 </CompleteMultipartUploadResult>
 ```
 
----- 
+----
 
 #### Abort incomplete multipart uploads
 
-A `DELETE` request issued to an object with query parameter `uploadId` will delete all unfinished parts of a multipart upload. 
+A `DELETE` request issued to an object with query parameter `uploadId` will delete all unfinished parts of a multipart upload.
 
 ##### Syntax
 
