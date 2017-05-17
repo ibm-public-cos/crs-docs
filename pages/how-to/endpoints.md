@@ -90,14 +90,5 @@ Types of endpoint:
     <td>private</td>
     <td><code class="highlighter-rouge">s3-api.us-south.objectstorage.service.networklayer.com</code></td>
   </tr>
-  <tr>
-    <td rowspan="2">US East</td>
-    <td>public</td>
-    <td><code class="highlighter-rouge">s3-api.us-east.objectstorage.softlayer.net</code></td>
-  </tr>
-  <tr>
-    <td>private</td>
-    <td><code class="highlighter-rouge">s3-api.us-east.objectstorage.service.networklayer.com</code></td>
-  </tr>
 </table>
 {:.endpointtable}
