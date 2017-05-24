@@ -84,11 +84,11 @@ Types of endpoint:
     <tr>
     <td rowspan="2">US South</td>
     <td>public</td>
-    <td><code class="highlighter-rouge">s3-api.us-south.objectstorage.softlayer.net</code></td>
+    <td><code class="highlighter-rouge">s3.us-south.objectstorage.softlayer.net</code></td>
   </tr>
   <tr>
     <td>private</td>
-    <td><code class="highlighter-rouge">s3-api.us-south.objectstorage.service.networklayer.com</code></td>
+    <td><code class="highlighter-rouge">s3.us-south.objectstorage.service.networklayer.com</code></td>
   </tr>
 </table>
 {:.endpointtable}
