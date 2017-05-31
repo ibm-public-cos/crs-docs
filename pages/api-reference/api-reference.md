@@ -22,7 +22,7 @@ The IBM Cloud Object Storage implementation of the S3 API supports the most comm
 ### Common Headers
 
 #### Common Request Headers
-The following table describes supported common request headers. Headers not listed here will be ignored if sent in a request.  More information about creating the authorization header can be found in the ["Authentication"]({{ site.baseurl }}/managing-access#authentication)section
+The following table describes supported common request headers. Headers not listed here will be ignored if sent in a request.  More information about creating the authorization header can be found in the ["Authentication"]({{ site.baseurl }}/manage-access#authentication)section
 
 | Header             | Note                               |
 |--------------------|-------------------------------------|
