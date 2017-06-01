@@ -12,7 +12,7 @@ redirect_from:
 folder: how-to
 ---
 
-SoftLayer provides regional endpoints for connecting applications or clients that use the S3 API to the public cloud. Endpoints should be chosen based on proximity to the application servers accessing the object store to minimize latency.  For workloads not concentrated in a single geographic area, the US Region endpoint distributes connections among the regional data centers.  Endpoints can be accessed over either plaintext or SSL depending on security requirements.
+SoftLayer provides regional endpoints for connecting applications or clients that use the S3 API to the public cloud. Endpoints should be chosen based on proximity to the application servers accessing the object store to minimize latency.  For workloads not concentrated in a single geographic area, the Cross Region endpoint routes connections to the nearest regional data centers.  Endpoints can be accessed over either plaintext or SSL depending on security requirements.
 
 Types of endpoint:
 
@@ -21,6 +21,7 @@ Types of endpoint:
 
 {% include important.html content="Bluemix infrastructure offerings are connected to a three-tiered network, segmenting public, private, and management traffic. Infrastructure on a customer's Bluemix account may transfer data between one another across the private network at no cost. Infrastructure offerings (such as bare metal servers, virtual servers, and cloud storage) connect to other applications and services in the Bluemix catalog (such as Watson services, containers, runtimes) across the public network, so data transfer between those two types of offerings is  metered and charged at standard public network bandwidth rates." %}
 
+### US Cross Region Endpoints
 
 <table>
   <thead>
@@ -65,6 +66,29 @@ Types of endpoint:
   <tr>
     <td>private</td>
     <td><code class="highlighter-rouge">s3-api.wdc-us-geo.objectstorage.service.networklayer.com</code></td>
+  </tr>
+</table>
+{:.endpointtable}
+
+
+### US Regional Endpoints
+
+<table>
+  <thead>
+    <tr>
+      <th>Region</th>
+      <th>Type</th>
+      <th>Endpoint</th>
+    </tr>
+  </thead>
+    <tr>
+    <td rowspan="2">US South</td>
+    <td>public</td>
+    <td><code class="highlighter-rouge">s3.us-south.objectstorage.softlayer.net</code></td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td><code class="highlighter-rouge">s3.us-south.objectstorage.service.networklayer.com</code></td>
   </tr>
 </table>
 {:.endpointtable}

@@ -25,6 +25,9 @@ At present two sets of credentials can be created per COS instance, allowing cre
 
 For more detail on authentication and authorization, see the [Managing access]( {{ site.baseurl }}/manage-access) section.
 
+For more detail on the different endpoints, see the [Selecting Endpoints]( {{ site.baseurl }}/endpoints) section.
+
+
 {% include note.html content="The user interface portal provides a high level view of a storage account.  It is possible to view credentials and endpoints using the portal as well as by using the Softlayer API." %}
 
 ### Using the control portal to view credentials and endpoints
