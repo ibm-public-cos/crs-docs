@@ -22,16 +22,16 @@ The IBM Cloud Object Storage implementation of the S3 API supports the most comm
 ### Common Headers
 
 #### Common Request Headers
-The following table describes supported common request headers. Headers not listed here will be ignored if sent in a request.  More information about creating the authorization header can be found in the ["Authentication"]({{ site.baseurl }}/manage-access#authentication)section
+The following table describes supported common request headers. COS ignores any common headers not listed below if sent in a request, although some requests may support other headers as defined in this documentation.  More information about creating the authorization header can be found in the ["Authentication"]({{ site.baseurl }}/manage-access#authentication)section
 
 | Header             | Note                               |
 |--------------------|-------------------------------------|
 | Authorization      | **Required** for all requests (AWS Signature Version 4).   |
 | Host               | **Required** for all requests.                 |
-| x-amz-date         | **Required** for all requests.                 |
-|x-amz-content-sha256| **Required** for uploading objects or any request with information in the body. |
+| x-amz-date         | **Required** for all requests. Can also be specified as `Date`.               |
+| x-amz-content-sha256 | **Required** for uploading objects or any request with information in the body. |
 | Content-Length     | **Required** for uploading objects, chunked encoding also supported.    |
-| Content-MD5        | A 128-bit MD5 hash value of the message being sent.                  |
+| Content-MD5        | A 128-bit MD5 hash value of the request body being sent.                  |
 | Expect             | `100-continue` waits for the headers to be accepted before sending the body.  |
 {:.opstable}
 
@@ -43,16 +43,73 @@ The following table describes common response headers.
 | Content-Length | The length of the request body in bytes.      |
 |Connection     |  Indicates whether the connection is open or closed.     |
 | Date           | Timestamp of the request.     |
+| ETag           | MD5 hash value of the request.     |
 | Server         | Name of the responding server.     |
 |X-Clv-Request-Id|  Unique identifier generated per request. |
 {:.opstable}
+
+### Error Codes
+
+| Error Code | Description | HTTP Status Code |
+| --- | ---| --- |
+| AccessDenied | Access Denied | 403 Forbidden |
+| BadDigest | The Content-MD5 you specified did not match what we received. | 400 Bad Request |
+| BucketAlreadyExists | The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again. | 409 Conflict |
+| BucketNotEmpty | The bucket you tried to delete is not empty. | 409 Conflict |
+| CredentialsNotSupported | This request does not support credentials. | 400 Bad Request |
+| EntityTooSmall | Your proposed upload is smaller than the minimum allowed object size. | 400 Bad Request |
+| EntityTooLarge | Your proposed upload exceeds the maximum allowed object size. | 400 Bad Request |
+| IncompleteBody | You did not provide the number of bytes specified by the Content-Length HTTP header. | 400 Bad Request |
+| IncorrectNumberOfFilesInPostRequest | POST requires exactly one file upload per request. | 400 Bad Request |
+| InlineDataTooLarge | Inline data exceeds the maximum allowed size. | 400 Bad Request |
+| InternalError | We encountered an internal error. Please try again. | 500 Internal Server Error |
+| InvalidAccessKeyId | The AWS access key Id you provided does not exist in our records. | 403 Forbidden |
+| InvalidArgument | Invalid Argument | 400 Bad Request |
+| InvalidBucketName | The specified bucket is not valid. | 400 Bad Request |
+| InvalidBucketState | The request is not valid with the current state of the bucket. | 409 Conflict |
+| InvalidDigest | The Content-MD5 you specified is not valid. | 400 Bad Request |
+| InvalidLocationConstraint | The specified location constraint is not valid. For more information about regions, see How to Select a Region for Your Buckets. | 400 Bad Request |
+| InvalidObjectState | The operation is not valid for the current state of the object. | 403 Forbidden |
+| InvalidPart | One or more of the specified parts could not be found. The part might not have been uploaded, or the specified entity tag might not have matched the part's entity tag. | 400 Bad Request |
+| InvalidPartOrder | The list of parts was not in ascending order. Parts list must specified in order by part number. | 400 Bad Request |
+| InvalidRange | The requested range cannot be satisfied. | 416 Requested Range Not Satisfiable |
+| InvalidRequest | Please use AWS4-HMAC-SHA256. | 400 Bad Request |
+| InvalidSecurity | The provided security credentials are not valid. | 403 Forbidden |
+| InvalidURI | Couldn't parse the specified URI. | 400 Bad Request |
+| KeyTooLong | Your key is too long. | 400 Bad Request |
+| MalformedACLError | The XML you provided was not well-formed or did not validate against our published schema. | 400 Bad Request |
+| MalformedPOSTRequest | The body of your POST request is not well-formed multipart/form-data. | 400 Bad Request |
+| MalformedXML | This happens when the user sends malformed xml (xml that doesn't conform to the published xsd) for the configuration. The error message is, "The XML you provided was not well-formed or did not validate against our published schema." | 400 Bad Request |
+| MaxMessageLengthExceeded | Your request was too big. | 400 Bad Request |
+| MaxPostPreDataLengthExceededError | Your POST request fields preceding the upload file were too large. | 400 Bad Request |
+| MetadataTooLarge | Your metadata headers exceed the maximum allowed metadata size. | 400 Bad Request |
+| MethodNotAllowed | The specified method is not allowed against this resource. | 405 Method Not Allowed |
+| MissingContentLength | You must provide the Content-Length HTTP header. | 411 Length Required |
+| MissingRequestBodyError | This happens when the user sends an empty xml document as a request. The error message is, "Request body is empty." | 400 Bad Request |
+| NoSuchBucket | The specified bucket does not exist. | 404 Not Found |
+| NoSuchKey | The specified key does not exist. | 404 Not Found |
+| NoSuchUpload | The specified multipart upload does not exist. The upload ID might be invalid, or the multipart upload might have been aborted or completed. | 404 Not Found |
+| NotImplemented | A header you provided implies functionality that is not implemented. | 501 Not Implemented |
+| OperationAborted | A conflicting conditional operation is currently in progress against this resource. Try again. | 409 Conflict |
+| PreconditionFailed | At least one of the preconditions you specified did not hold. | 412 Precondition | Failed |
+| Redirect | Temporary redirect. | 307 Moved Temporarily |
+| RequestIsNotMultiPartContent | Bucket POST must be of the enclosure-type multipart/form-data. | 400 Bad Request |
+| RequestTimeout | Your socket connection to the server was not read from or written to within the timeout period. | 400 Bad Request |
+| RequestTimeTooSkewed | The difference between the request time and the server's time is too large. | 403 Forbidden |
+| SignatureDoesNotMatch | The request signature we calculated does not match the signature you provided. Check your AWS secret access key and signing method. For more information, see REST Authentication and SOAP Authentication for details. | 403 Forbidden |
+| ServiceUnavailable | Reduce your request rate. | 503 Service Unavailable |
+| SlowDown | Reduce your request rate. | 503 Slow Down |
+| TemporaryRedirect | You are being redirected to the bucket while DNS updates. | 307 Moved Temporarily |
+| TooManyBuckets | You have attempted to create more buckets than allowed. | 400 Bad Request |
+| UnexpectedContent | This request does not support content. | 400 Bad Request |
+| UserKeyMustBeSpecified | The bucket POST must contain the specified field name. If it is specified, check the order of the fields. | 400 Bad Request |
 
 ### Operations on the Account
 {: #operations-on-service}
 
 #### List buckets belonging to an account
 
-A `GET` issued to the endpoint root returns a list of buckets associated with the requesting account.
+A `GET` issued to the endpoint root returns a list of buckets associated with the requesting account. This operation does not make use of operation specific headers, query parameters, or payload elements.
 
 ##### Syntax
 
@@ -101,7 +158,7 @@ Authorization: {authorization-string}
 ```
 
 ----
-
+<!-- 
 #### View the storage class of buckets belonging to an account
 
 A `GET` issued to the endpoint root with the `pagination` query parameter returns a list of buckets associated with the requesting account along with their storage class (shown as `LocationConstraint`).
@@ -158,14 +215,16 @@ Authorization: {authorization-string}
 
 ----
 
+-->
+
 ### Operations on Buckets
 {: #operations-on-buckets}
 
 #### Create a new bucket
 
-A `PUT` issued to the endpoint root will create a bucket when a string is provided.  Bucket names must be unique, and accounts are limited to 100 buckets each.  Bucket names must be DNS-compliant; names between 3 and 63 characters long must be made of lowercase letters, numbers, and dashes. Bucket names must begin and end with a lowercase letter or number.  Bucket names resembling IP addresses are not allowed.
+A `PUT` issued to the endpoint root will create a bucket when a string is provided.  Bucket names must be unique, and accounts are limited to 100 buckets each.  Bucket names must be DNS-compliant; names between 3 and 63 characters long must be made of lowercase letters, numbers, and dashes. Bucket names must begin and end with a lowercase letter or number.  Bucket names resembling IP addresses are not allowed. This operation does not make use of operation specific headers or query parameters.
 
-{% include note.html content="Using third-party tools or SDKs may enforce setting a 'LocationConstraint' when creating a bucket. If required, this value must be set to 'us-standard'. Unlike AWS S3, IBM COS uses this value to indicate the storage class of an object. This field has no relation to physical geography or region - those values are provided within the endpoint used to connect to the service. Currently, the only permitted values for 'LocationCostraint' are 'us-standard', 'us-vault', and 'us-cold'." %}
+{% include custom/locations.md %}
 
 ##### Syntax
 
@@ -354,6 +413,49 @@ Server: Cleversafe/3.9.0.115
 X-Clv-S3-Version: 2.5
 Content-Length: 0
 ```
+
+----
+
+#### Retrieve a bucket's storage class
+
+A `GET` issued to a bucket with the proper parameters will return the storage class for that bucket.  This operation does not make use of operation specific headers, additional query parameters, or payload elements.
+
+##### Syntax
+
+```bash
+HEAD https://{endpoint}/{bucket-name}?location= # path style
+HEAD https://{bucket-name}.{endpoint}?location= # virtual host style
+```
+
+##### Sample request
+
+This is an example of fetching the headers for the 'images' bucket.
+
+```http
+GET /images?location= HTTP/1.1
+Content-Type: text/plain
+Host: s3-api.us-geo.objectstorage.softlayer.net
+X-Amz-Date: 20160821T052842Z
+Authorization:{authorization-string}
+```
+
+##### Sample response
+
+```http
+HTTP/1.1 200 OK
+Date: Wed, 24 May 2017 17:46:35 GMT
+X-Clv-Request-Id: 0c2832e3-3c51-4ea6-96a3-cd8482aca08a
+Accept-Ranges: bytes
+Server: Cleversafe/3.10.138
+X-Clv-S3-Version: 2.5
+Content-Length: 151
+```
+
+```xml
+<LocationConstraint xmlns="http://s3.amazonaws.com/doc/2006-03-01/">us-flex</LocationConstraint>
+```
+
+----
 
 ----
 
@@ -954,6 +1056,16 @@ HEAD https://{endpoint}/{bucket-name}/{object-name} # path style
 HEAD https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 ```
 
+##### Optional headers
+
+Header | Type | Description
+--- | ---- | ------------
+`range` | string | Returns the bytes of an object within the specified range.
+`x-amz-copy-source-if-match` | string (`ETag`)| Return the metadata if the specified `ETag` matches the source object.
+`x-amz-copy-source-if-none-match` | string (`ETag`)| Return the metadata if the specified `ETag` is different from the source object.
+`x-amz-copy-source-if-unmodified-since` | string (timestamp)| Return the metadata if the the source object has not been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
+`x-amz-copy-source-if-modified-since` | string (timestamp)| Return the metadata if the source object has been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
+
 ##### Sample request
 
 ```http
@@ -992,6 +1104,16 @@ A `GET` given a path to an object downloads the object.
 GET https://{endpoint}/{bucket-name}/{object-name} # path style
 GET https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 ```
+
+#### Optional headers
+
+Header | Type | Description
+--- | ---- | ------------
+`range` | string | Returns the bytes of an object within the specified range.
+`x-amz-copy-source-if-match` | string (`ETag`)| Return the object if the specified `ETag` matches the source object.
+`x-amz-copy-source-if-none-match` | string (`ETag`)| Return the object if the specified `ETag` is different from the source object.
+`x-amz-copy-source-if-unmodified-since` | string (timestamp)| Return the object if the the source object has not been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
+`x-amz-copy-source-if-modified-since` | string (timestamp)| Return the object if the source object has been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
 
 ##### Sample request
 

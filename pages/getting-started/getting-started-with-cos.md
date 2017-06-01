@@ -17,7 +17,7 @@ toc: False
 3.  [Create a bucket]({{ site.baseurl }}/storing-and-retrieving-objects#using-buckets) by clicking the **Add** button.
 4.  [Upload an object]({{ site.baseurl }}/storing-and-retrieving-objects#using-objects) by clicking the **+** button at the right of the first row and selecting a file from your computer. 
 
-Congratulations - that file is now encrpyted and dispersed across North America with no complete copy existing in any given data center. To learn more about COS and how to use it in your applications take a look through the developer documentation:
+Congratulations - that file is now encrpyted and dispersed with no complete copy existing in any given data center. To learn more about COS and how to use it in your applications take a look through the developer documentation:
 
 * [API overview]({{ site.baseurl }}/about-compatibility-api) and [detailed reference]({{ site.baseurl }}/api-reference)
 * [CLI options]({{ site.baseurl }}/cli)

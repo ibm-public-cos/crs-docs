@@ -13,7 +13,7 @@ toc: false
 
 {% include custom/promo.html %}
 
-Information stored with IBM Cloud Object Storage is encrypted and dispersed across multiple geographic locations, and accessed through an implementation of the S3 API. This service makes use of the distributed storage technologies provided by IBM's Cloud Object Storage System. 
+Information stored with IBM Cloud Object Storage is encrypted and dispersed across multiple geographic locations, and accessed through an implementation of the S3 API. This service makes use of the distributed storage technologies provided by IBM's Cloud Object Storage System (formerly Cleversafe). 
 
 Cross Region service provides higher durability and availability than using a single region at the cost of slightly higher latency. Regional service reverses those tradeoffs, and distributes objects across multiple availability zones within a single region. If a given region or availability zone is unavailable, the object store continues to function without impediment, and any missed changes are applied when the data center comes back online.
 
