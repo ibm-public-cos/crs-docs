@@ -10,7 +10,7 @@ redirect_from:
   - /crs-api-reference
   - /crs-api-reference.html
 folder: api-reference
-toc: false
+toc: true
 ---
 
 ### Overview
@@ -158,6 +158,7 @@ Authorization: {authorization-string}
 ```
 
 ----
+
 <!-- 
 #### View the storage class of buckets belonging to an account
 
@@ -414,6 +415,8 @@ X-Clv-S3-Version: 2.5
 Content-Length: 0
 ```
 
+<!-- 
+
 ----
 
 #### Retrieve a bucket's storage class
@@ -455,7 +458,7 @@ Content-Length: 151
 <LocationConstraint xmlns="http://s3.amazonaws.com/doc/2006-03-01/">us-flex</LocationConstraint>
 ```
 
-----
+-->
 
 ----
 

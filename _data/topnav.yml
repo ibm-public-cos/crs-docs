@@ -25,7 +25,7 @@ topnav_dropdowns:
         - title: IBM COS Standard Cross-Region (S3 API)
           url: /index.html
         - title: IBM COS Standard Regional (Swift API)
-          external_url: http://sldn.softlayer.com/reference/objectstorageapi
+          external_url: http://knowledgelayer.softlayer.com/topic/ibm-cloud-object-storage-swift
         - title: Object Storage for Bluemix
           external_url: https://console.ng.bluemix.net/docs/services/ObjectStorage/index.html
     - title: Community
