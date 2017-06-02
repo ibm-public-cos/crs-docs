@@ -22,11 +22,11 @@ topnav_dropdowns:
           external_url: https://www.ibm.com/cloud-computing/products/storage/object-storage/
     - title: Documentation
       folderitems:
-        - title: IBM COS Standard Cross-Region (S3 API)
+        - title: IBM COS (S3 API)
           url: /index.html
-        - title: IBM COS Standard Regional (Swift API)
+        - title: OpenStack Object Storage (Swift API)
           external_url: http://knowledgelayer.softlayer.com/topic/ibm-cloud-object-storage-swift
-        - title: Object Storage for Bluemix
+        - title: Object Storage for Bluemix Developer Services
           external_url: https://console.ng.bluemix.net/docs/services/ObjectStorage/index.html
     - title: Community
       folderitems:
