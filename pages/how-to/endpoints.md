@@ -12,7 +12,7 @@ redirect_from:
 folder: how-to
 ---
 
-SoftLayer provides regional endpoints for connecting applications or clients that use the S3 API to the public cloud. Endpoints should be chosen based on proximity to the application servers accessing the object store to minimize latency.  For workloads not concentrated in a single geographic area, the Cross Region endpoint routes connections to the nearest regional data centers.  Endpoints can be accessed over either plaintext or SSL depending on security requirements.
+Both regional and cross region endpoints are available for connecting applications or clients that use the S3 API to the public cloud. Endpoints should be chosen based on proximity to the application servers accessing the object store to minimize latency.  For workloads not concentrated in a single geographic area, the Cross Region endpoint routes connections to the nearest regional data centers.  When using a cross region endpoint, it is possible to direct traffic to a specific data center, although the data will still be distributed across all three sites.  Endpoints can be accessed over either plaintext or SSL depending on security requirements.
 
 Types of endpoint:
 
@@ -32,7 +32,7 @@ Types of endpoint:
     </tr>
   </thead>
     <tr>
-    <td rowspan="2">US Region</td>
+    <td rowspan="2">US Cross Region</td>
     <td>public</td>
     <td><code class="highlighter-rouge">s3-api.us-geo.objectstorage.softlayer.net</code></td>
   </tr>
