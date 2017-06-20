@@ -1026,7 +1026,19 @@ Authorization: {authorization-string}
 
 <p>A <code class="highlighter-rouge">PUT</code> issued to the endpoint root will create a bucket when a string is provided.  Bucket names must be unique, and accounts are limited to 100 buckets each.  Bucket names must be DNS-compliant; names between 3 and 63 characters long must be made of lowercase letters, numbers, and dashes. Bucket names must begin and end with a lowercase letter or number.  Bucket names resembling IP addresses are not allowed. This operation does not make use of operation specific headers or query parameters.</p>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using third-party tools or SDKs may enforce setting a ‘LocationConstraint’ when creating a bucket. If required, this value must be set to ‘us-standard’. Unlike AWS S3, IBM COS uses this value to indicate the storage class of an object. This field has no relation to physical geography or region - those values are provided within the endpoint used to connect to the service. Currently, the only permitted values for ‘LocationCostraint’ are ‘us-standard’, ‘us-vault’, ‘us-cold’, ‘us-flex’, ‘us-south-standard’, ‘us-south-vault’, us-south-cold’, and ‘us-south-flex’.</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using third-party tools or SDKs may enforce manually setting a <code class="highlighter-rouge">LocationConstraint</code> when creating a bucket. Unlike AWS S3, IBM COS uses this value to indicate the storage class of an object. This field has no relation to physical geography or region - those values are provided within the endpoint used to connect to the service. Currently, the only permitted values for <code class="highlighter-rouge">LocationCostraint</code> are: <br />
+    <code class="highlighter-rouge">us-standard</code> / <code class="highlighter-rouge">us-vault</code> / <code class="highlighter-rouge">us-cold</code> / <code class="highlighter-rouge">us-flex</code> <br />
+    <code class="highlighter-rouge">us-south-standard</code> /
+<code class="highlighter-rouge">us-south-vault</code>  /
+<code class="highlighter-rouge">us-south-cold</code> /
+<code class="highlighter-rouge">us-south-flex</code> <br />
+    <code class="highlighter-rouge">eu-standard</code> / 
+<code class="highlighter-rouge">eu-vault</code> / 
+<code class="highlighter-rouge">eu-cold</code> / 
+<code class="highlighter-rouge">eu-flex</code> <br />
+
+
+</div>
 
 <h5 id="syntax-1">Syntax</h5>
 
@@ -1066,7 +1078,19 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 
 <p>To create a Vault bucket, send an XML block specifying a bucket configuration with a <code class="highlighter-rouge">LocationConstraint</code> of <code class="highlighter-rouge">us-vault</code> in the body of a <code class="highlighter-rouge">PUT</code> request to a bucket endpoint.  Note that standard bucket <a href="/crs-docs/api-reference#create-a-new-bucket">naming rules</a> apply.</p>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using third-party tools or SDKs may enforce setting a ‘LocationConstraint’ when creating a bucket. If required, this value must be set to ‘us-standard’. Unlike AWS S3, IBM COS uses this value to indicate the storage class of an object. This field has no relation to physical geography or region - those values are provided within the endpoint used to connect to the service. Currently, the only permitted values for ‘LocationCostraint’ are ‘us-standard’, ‘us-vault’, ‘us-cold’, ‘us-flex’, ‘us-south-standard’, ‘us-south-vault’, us-south-cold’, and ‘us-south-flex’.</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using third-party tools or SDKs may enforce manually setting a <code class="highlighter-rouge">LocationConstraint</code> when creating a bucket. Unlike AWS S3, IBM COS uses this value to indicate the storage class of an object. This field has no relation to physical geography or region - those values are provided within the endpoint used to connect to the service. Currently, the only permitted values for <code class="highlighter-rouge">LocationCostraint</code> are: <br />
+    <code class="highlighter-rouge">us-standard</code> / <code class="highlighter-rouge">us-vault</code> / <code class="highlighter-rouge">us-cold</code> / <code class="highlighter-rouge">us-flex</code> <br />
+    <code class="highlighter-rouge">us-south-standard</code> /
+<code class="highlighter-rouge">us-south-vault</code>  /
+<code class="highlighter-rouge">us-south-cold</code> /
+<code class="highlighter-rouge">us-south-flex</code> <br />
+    <code class="highlighter-rouge">eu-standard</code> / 
+<code class="highlighter-rouge">eu-vault</code> / 
+<code class="highlighter-rouge">eu-cold</code> / 
+<code class="highlighter-rouge">eu-flex</code> <br />
+
+
+</div>
 
 <h5 id="syntax-2">Syntax</h5>
 
@@ -1118,7 +1142,19 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 
 <p>To create a Vault bucket, send an XML block specifying a bucket configuration with a <code class="highlighter-rouge">LocationConstraint</code> of <code class="highlighter-rouge">us-cold</code> in the body of a <code class="highlighter-rouge">PUT</code> request to a bucket endpoint.  Note that standard bucket <a href="/crs-docs/api-reference#create-a-new-bucket">naming rules</a> apply.</p>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using third-party tools or SDKs may enforce setting a ‘LocationConstraint’ when creating a bucket. If required, this value must be set to ‘us-standard’. Unlike AWS S3, IBM COS uses this value to indicate the storage class of an object. This field has no relation to physical geography or region - those values are provided within the endpoint used to connect to the service. Currently, the only permitted values for ‘LocationCostraint’ are ‘us-standard’, ‘us-vault’, ‘us-cold’, ‘us-flex’, ‘us-south-standard’, ‘us-south-vault’, us-south-cold’, and ‘us-south-flex’.</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using third-party tools or SDKs may enforce manually setting a <code class="highlighter-rouge">LocationConstraint</code> when creating a bucket. Unlike AWS S3, IBM COS uses this value to indicate the storage class of an object. This field has no relation to physical geography or region - those values are provided within the endpoint used to connect to the service. Currently, the only permitted values for <code class="highlighter-rouge">LocationCostraint</code> are: <br />
+    <code class="highlighter-rouge">us-standard</code> / <code class="highlighter-rouge">us-vault</code> / <code class="highlighter-rouge">us-cold</code> / <code class="highlighter-rouge">us-flex</code> <br />
+    <code class="highlighter-rouge">us-south-standard</code> /
+<code class="highlighter-rouge">us-south-vault</code>  /
+<code class="highlighter-rouge">us-south-cold</code> /
+<code class="highlighter-rouge">us-south-flex</code> <br />
+    <code class="highlighter-rouge">eu-standard</code> / 
+<code class="highlighter-rouge">eu-vault</code> / 
+<code class="highlighter-rouge">eu-cold</code> / 
+<code class="highlighter-rouge">eu-flex</code> <br />
+
+
+</div>
 
 <h5 id="syntax-3">Syntax</h5>
 
@@ -1170,7 +1206,19 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 
 <p>To create a Flex bucket, send an XML block specifying a bucket configuration with a <code class="highlighter-rouge">LocationConstraint</code> of <code class="highlighter-rouge">us-flex</code> in the body of a <code class="highlighter-rouge">PUT</code> request to a bucket endpoint.  Note that standard bucket <a href="/crs-docs/api-reference#create-a-new-bucket">naming rules</a> apply.</p>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using third-party tools or SDKs may enforce setting a ‘LocationConstraint’ when creating a bucket. If required, this value must be set to ‘us-standard’. Unlike AWS S3, IBM COS uses this value to indicate the storage class of an object. This field has no relation to physical geography or region - those values are provided within the endpoint used to connect to the service. Currently, the only permitted values for ‘LocationCostraint’ are ‘us-standard’, ‘us-vault’, ‘us-cold’, ‘us-flex’, ‘us-south-standard’, ‘us-south-vault’, us-south-cold’, and ‘us-south-flex’.</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using third-party tools or SDKs may enforce manually setting a <code class="highlighter-rouge">LocationConstraint</code> when creating a bucket. Unlike AWS S3, IBM COS uses this value to indicate the storage class of an object. This field has no relation to physical geography or region - those values are provided within the endpoint used to connect to the service. Currently, the only permitted values for <code class="highlighter-rouge">LocationCostraint</code> are: <br />
+    <code class="highlighter-rouge">us-standard</code> / <code class="highlighter-rouge">us-vault</code> / <code class="highlighter-rouge">us-cold</code> / <code class="highlighter-rouge">us-flex</code> <br />
+    <code class="highlighter-rouge">us-south-standard</code> /
+<code class="highlighter-rouge">us-south-vault</code>  /
+<code class="highlighter-rouge">us-south-cold</code> /
+<code class="highlighter-rouge">us-south-flex</code> <br />
+    <code class="highlighter-rouge">eu-standard</code> / 
+<code class="highlighter-rouge">eu-vault</code> / 
+<code class="highlighter-rouge">eu-cold</code> / 
+<code class="highlighter-rouge">eu-flex</code> <br />
+
+
+</div>
 
 <h5 id="syntax-4">Syntax</h5>
 

@@ -535,7 +535,19 @@ copy: s3://bucket-1/new-file to s3://bucket-2/new-file
 
 <p>Creating a new bucket:</p>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using third-party tools or SDKs may enforce setting a ‘LocationConstraint’ when creating a bucket. If required, this value must be set to ‘us-standard’. Unlike AWS S3, IBM COS uses this value to indicate the storage class of an object. This field has no relation to physical geography or region - those values are provided within the endpoint used to connect to the service. Currently, the only permitted values for ‘LocationCostraint’ are ‘us-standard’, ‘us-vault’, ‘us-cold’, ‘us-flex’, ‘us-south-standard’, ‘us-south-vault’, us-south-cold’, and ‘us-south-flex’.</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using third-party tools or SDKs may enforce manually setting a <code class="highlighter-rouge">LocationConstraint</code> when creating a bucket. Unlike AWS S3, IBM COS uses this value to indicate the storage class of an object. This field has no relation to physical geography or region - those values are provided within the endpoint used to connect to the service. Currently, the only permitted values for <code class="highlighter-rouge">LocationCostraint</code> are: <br />
+    <code class="highlighter-rouge">us-standard</code> / <code class="highlighter-rouge">us-vault</code> / <code class="highlighter-rouge">us-cold</code> / <code class="highlighter-rouge">us-flex</code> <br />
+    <code class="highlighter-rouge">us-south-standard</code> /
+<code class="highlighter-rouge">us-south-vault</code>  /
+<code class="highlighter-rouge">us-south-cold</code> /
+<code class="highlighter-rouge">us-south-flex</code> <br />
+    <code class="highlighter-rouge">eu-standard</code> / 
+<code class="highlighter-rouge">eu-vault</code> / 
+<code class="highlighter-rouge">eu-cold</code> / 
+<code class="highlighter-rouge">eu-flex</code> <br />
+
+
+</div>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>aws --endpoint-url<span class="o">=</span>https://<span class="o">{</span>endpoint<span class="o">}</span> s3api create-bucket --bucket <span class="o">{</span>bucket-name<span class="o">}</span> <span class="o">[</span>--region us-standard]
 </code></pre>
