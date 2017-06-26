@@ -13,7 +13,7 @@ folder: help
 toc: false
 ---
 
-{% include note.html content="Information on pricing can be found at [IBM Cloud](https://www.ibm.com/cloud-computing/products/storage/object-storage/public-service/#othertab2){:new_window}." %}
+{% include note.html content="Information on pricing can be found at [IBM Cloud](https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage#s3api){:new_window}." %}
 
 ### Invoices
 Account invoices can be found at **Account** > **Billing** > **Invoices** in the navigation menu.
