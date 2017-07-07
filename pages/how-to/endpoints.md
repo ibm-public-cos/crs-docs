@@ -92,3 +92,53 @@ Types of endpoint:
   </tr>
 </table>
 {:.endpointtable}
+
+
+### EU Cross Region Endpoints
+
+<table>
+  <thead>
+    <tr>
+      <th>Region</th>
+      <th>Type</th>
+      <th>Endpoint</th>
+    </tr>
+  </thead>
+    <tr>
+    <td rowspan="2">EU Cross Region</td>
+    <td>public</td>
+    <td><code class="highlighter-rouge">s3.eu-geo.objectstorage.softlayer.net</code></td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td><code class="highlighter-rouge">s3.eu-geo.objectstorage.service.networklayer.com</code></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Amsterdam</td>
+    <td>public</td>
+    <td><code class="highlighter-rouge">s3.ams-eu-geo.objectstorage.softlayer.net</code></td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td><code class="highlighter-rouge">s3.ams-eu-geo.objectstorage.service.networklayer.com</code></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Frankfurt</td>
+        <td>public</td>
+    <td><code class="highlighter-rouge">s3.fra-eu-geo.objectstorage.softlayer.net</code></td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td><code class="highlighter-rouge">s3.fra-eu-geo.objectstorage.service.networklayer.com</code></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Milan</td>
+    <td>public</td>
+    <td><code class="highlighter-rouge">s3.mil-eu-geo.objectstorage.softlayer.net</code></td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td><code class="highlighter-rouge">s3pi.mil-eu-geo.objectstorage.service.networklayer.com</code></td>
+  </tr>
+</table>
+{:.endpointtable}
