@@ -39,7 +39,7 @@ For more detail on the different endpoints, see the [Selecting Endpoints]( {{ si
 
 ### Using libraries and SDKs
 
-IBM Cloud does not provide native libraries or SDKs for interacting with COS offerings at this time, instead 2stored data is accessed using an implementation of the S3 API. Compatibility with an established object storage API allows developers to make use of a large ecosystem of third-party tools and SDKs.  
+IBM Cloud does not provide native libraries or SDKs for interacting with COS offerings at this time, instead stored data is accessed using an implementation of the S3 API. Compatibility with an established object storage API allows developers to make use of a large ecosystem of third-party tools and SDKs.  
 
 A full list of supported S3 API operations can be found in the [API Overview]( {{ site.baseurl }}/about-compatibility-api).
 
