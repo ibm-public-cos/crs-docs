@@ -428,9 +428,7 @@
 
     
 
-  <h1 id="ibm-cloud-object-storage-faq">IBM Cloud Object Storage FAQ</h1>
-
-<h2 id="api-questions">API Questions</h2>
+  <h4 id="api-questions">API Questions</h4>
 
 <p><strong>Q:  Are COS bucket names case sensitive?</strong>
 A:  Bucket names are required to be DNS addressable, and thus not case sensitive.</p>
@@ -438,7 +436,7 @@ A:  Bucket names are required to be DNS addressable, and thus not case sensitive
 <p><strong>Q:  What is the maximum number of characters that can be used in an Object name?</strong>
 A:  1024</p>
 
-<h2 id="offering-questions">Offering Questions</h2>
+<h4 id="offering-questions">Offering Questions</h4>
 
 <p><strong>Q:  Do we offer a free tier option for IBM Cloud Object Storage?</strong>
 A:  Yes, use promo code <code class="highlighter-rouge">COSFREE</code> to obtain 25 GB of storage and a bunch of operations per month.</p>
@@ -455,7 +453,7 @@ A:  The storage class (eg <code class="highlighter-rouge">us-flex</code>) is ass
 <p><strong>Q:  Can the storage class of a bucket be changed?  For example, if you have production data in ‘standard’, can we easily switch it to ‘vault’ for billing purposes if we are not using it frequently?</strong>
 A:  Today changing of storage class requires manually moving or copying the data from one bucket to another bucket with the desired storage class.</p>
 
-<h2 id="performance-questions">Performance Questions</h2>
+<h4 id="performance-questions">Performance Questions</h4>
 
 <p><strong>Q:  Does data consistency in COS come with a performance impact?</strong>
 A:  Consistency with any distributed system comes with a cost, but the efficiency of the IBM COS dispersed storage system is higher, and overhead is lower compared to systems with multiple synchronous copies.</p>
@@ -463,7 +461,7 @@ A:  Consistency with any distributed system comes with a cost, but the efficienc
 <p><strong>Q:  Aren’t there performance implications if my application needs to manipulate large objects?</strong>
 A:  For performance optimization, objects can be uploaded and downloaded in multiple parts, in parallel.</p>
 
-<h2 id="encryption-questions">Encryption Questions</h2>
+<h4 id="encryption-questions">Encryption Questions</h4>
 
 <p><strong>Q:  Does IBM COS provide encryption at rest and in motion?</strong>
 A:  Yes.  Data at rest is encrypted with automatic provider side Advanced Encryption Standard (AES) 256-bit encryption and Secure Hash Algorithm (SHA)-256 hash. Data in motion is secured by using built-in carrier grade Transport Layer Security/Secure Sockets Layer (TLS/SSL) or SNMPv3 with AES encryption.</p>
@@ -480,7 +478,7 @@ A:  The algorithms are FIPS 140-2 ready but testing / certification is still pen
 <p><strong>Q:  Will client-key encryption be supported?</strong>
 A:  Yes, client-key encryption will be supported in 2017.</p>
 
-<h2 id="general-questions">General questions</h2>
+<h4 id="general-questions">General questions</h4>
 
 <p><strong>Q: How many objects can fit in a single bucket?</strong>
 A: There is no practical limit to the number of objects in a single bucket.</p>

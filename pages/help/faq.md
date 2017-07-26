@@ -10,10 +10,8 @@ folder: help
 toc: false
 ---
 
-# IBM Cloud Object Storage FAQ 
 
-
-## API Questions
+#### API Questions
 
 **Q:  Are COS bucket names case sensitive?**
 A:  Bucket names are required to be DNS addressable, and thus not case sensitive.
@@ -21,7 +19,7 @@ A:  Bucket names are required to be DNS addressable, and thus not case sensitive
 **Q:  What is the maximum number of characters that can be used in an Object name?**
 A:  1024
 
-## Offering Questions
+#### Offering Questions
 
 **Q:  Do we offer a free tier option for IBM Cloud Object Storage?**
 A:  Yes, use promo code `COSFREE` to obtain 25 GB of storage and a bunch of operations per month. 
@@ -39,7 +37,7 @@ A:  The storage class (eg `us-flex`) is assigned to the `LocationConstraint` con
 A:  Today changing of storage class requires manually moving or copying the data from one bucket to another bucket with the desired storage class. 
 
 
-## Performance Questions
+#### Performance Questions
 
 **Q:  Does data consistency in COS come with a performance impact?**
 A:  Consistency with any distributed system comes with a cost, but the efficiency of the IBM COS dispersed storage system is higher, and overhead is lower compared to systems with multiple synchronous copies.  
@@ -48,7 +46,7 @@ A:  Consistency with any distributed system comes with a cost, but the efficienc
 A:  For performance optimization, objects can be uploaded and downloaded in multiple parts, in parallel. 
 
  
-## Encryption Questions
+#### Encryption Questions
 
 **Q:  Does IBM COS provide encryption at rest and in motion?**
 A:  Yes.  Data at rest is encrypted with automatic provider side Advanced Encryption Standard (AES) 256-bit encryption and Secure Hash Algorithm (SHA)-256 hash. Data in motion is secured by using built-in carrier grade Transport Layer Security/Secure Sockets Layer (TLS/SSL) or SNMPv3 with AES encryption.
@@ -65,7 +63,7 @@ A:  The algorithms are FIPS 140-2 ready but testing / certification is still pen
 **Q:  Will client-key encryption be supported?**
 A:  Yes, client-key encryption will be supported in 2017.  
 
-## General questions
+#### General questions
 
 **Q: How many objects can fit in a single bucket?**
 A: There is no practical limit to the number of objects in a single bucket.
