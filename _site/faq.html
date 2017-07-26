@@ -432,75 +432,75 @@
 
 <h2 id="api-questions">API Questions</h2>
 
-<p>Q:  Are COS global bucket names case sensitive?
+<p><strong>Q:  Are COS bucket names case sensitive?</strong>
 A:  Bucket names are required to be DNS addressable, and thus not case sensitive.</p>
 
-<p>Q:  What is the maximum number of characters that can be used in an Object name?  Current filesystem limits are 255 characters.<br />
+<p><strong>Q:  What is the maximum number of characters that can be used in an Object name?</strong>
 A:  1024</p>
 
 <h2 id="offering-questions">Offering Questions</h2>
 
-<p>Q:  Do we offer a free tier option for IBM Cloud Object Storage?
+<p><strong>Q:  Do we offer a free tier option for IBM Cloud Object Storage?</strong>
 A:  Yes, use promo code <code class="highlighter-rouge">COSFREE</code> to obtain 25 GB of storage and a bunch of operations per month.</p>
 
-<p>Q:  Is there a 100-bucket limit to an account?  What happens if we need more?
+<p><strong>Q:  Is there a 100-bucket limit to an account?  What happens if we need more?</strong>
 A:  Yes, 100 is the current bucket limit.  Generally, prefixes are a better way to group together objects in a bucket, unless the data needs to be in a different region or storage class.  For example, to group patient records, you would use one prefix per patient. If this is not a workable solution, contact customer support.</p>
 
-<p>Q:  If I want to store my data using IBM COS Vault or Cold Vault, do I need to create another account?
+<p><strong>Q:  If I want to store my data using IBM COS Vault or Cold Vault, do I need to create another account?</strong>
 A:  No, storage classes (and regions as well) are defined at the bucket level.  Simply create a new bucket that is set to the desired storage class.</p>
 
-<p>Q:  When I create a bucket using the API, how do I set the storage class?
+<p><strong>Q:  When I create a bucket using the API, how do I set the storage class?</strong>
 A:  The storage class (eg <code class="highlighter-rouge">us-flex</code>) is assigned to the <code class="highlighter-rouge">LocationConstraint</code> configuration variable for that bucket.  This is because of a key difference between the was AWS S3 and IBM COS handle storage classes.  IBM COS sets storage classes at the bucket level, while AWS S3 assigns a storage class to an individual object.</p>
 
-<p>Q:  Can the storage class of a bucket be changed?  For example, if you have production data in ‘standard’, can we easily switch it to ‘vault’ for billing purposes if we are not using it frequently?
+<p><strong>Q:  Can the storage class of a bucket be changed?  For example, if you have production data in ‘standard’, can we easily switch it to ‘vault’ for billing purposes if we are not using it frequently?</strong>
 A:  Today changing of storage class requires manually moving or copying the data from one bucket to another bucket with the desired storage class.</p>
 
 <h2 id="performance-questions">Performance Questions</h2>
 
-<p>Q:  Does data consistency in COS come with a performance impact?
+<p><strong>Q:  Does data consistency in COS come with a performance impact?</strong>
 A:  Consistency with any distributed system comes with a cost, but the efficiency of the IBM COS dispersed storage system is higher, and overhead is lower compared to systems with multiple synchronous copies.</p>
 
-<p>Q:  Aren’t there performance implications if my application needs to manipulate large objects?
+<p><strong>Q:  Aren’t there performance implications if my application needs to manipulate large objects?</strong>
 A:  For performance optimization, objects can be uploaded and downloaded in multiple parts, in parallel.</p>
 
 <h2 id="encryption-questions">Encryption Questions</h2>
 
-<p>Q:  Does IBM COS provide encryption at rest and in motion?
+<p><strong>Q:  Does IBM COS provide encryption at rest and in motion?</strong>
 A:  Yes.  Data at rest is encrypted with automatic provider side Advanced Encryption Standard (AES) 256-bit encryption and Secure Hash Algorithm (SHA)-256 hash. Data in motion is secured by using built-in carrier grade Transport Layer Security/Secure Sockets Layer (TLS/SSL) or SNMPv3 with AES encryption.</p>
 
-<p>Q:  What is the typical encryption overhead if a customer wants to encrypt their data?
+<p><strong>Q:  What is the typical encryption overhead if a customer wants to encrypt their data?</strong>
 A:  Server side encryption is always on for customer data.  Compared to the hashing required in S3 authentication and the erasure coding, encryption is not a big part of the processing cost of COS.</p>
 
-<p>Q:  Does IBM COS encrypt all data?<br />
+<p><strong>Q:  Does IBM COS encrypt all data?</strong><br />
 A:  Yes, IBM COS encrypts all data.</p>
 
-<p>Q:  Does IBM COS have FIPS 140-2 compliance for the encryption algorithms?
+<p><strong>Q:  Does IBM COS have FIPS 140-2 compliance for the encryption algorithms?</strong>
 A:  The algorithms are FIPS 140-2 ready but testing / certification is still pending.</p>
 
-<p>Q:  Will client-key encryption be supported?
+<p><strong>Q:  Will client-key encryption be supported?</strong>
 A:  Yes, client-key encryption will be supported in 2017.</p>
 
 <h2 id="general-questions">General questions</h2>
 
-<p>Q: How many objects can fit in a single bucket?
+<p><strong>Q: How many objects can fit in a single bucket?</strong>
 A: There is no practical limit to the number of objects in a single bucket.</p>
 
-<p>Q: Can I nest buckets inside one another?
+<p><strong>Q: Can I nest buckets inside one another?</strong>
 A: No, buckets can not be nested.  If a greater level of organization is required within a bucket, the use of prefixes is supported: <code class="highlighter-rouge"><span class="p">{</span><span class="err">endpoint</span><span class="p">}</span><span class="err">/</span><span class="p">{</span><span class="err">bucket-name</span><span class="p">}</span><span class="err">/</span><span class="p">{</span><span class="err">object-prefix</span><span class="p">}</span><span class="err">/</span><span class="p">{</span><span class="err">object-name</span><span class="p">}</span></code>.  Note that the object’s key remains the combination <code class="highlighter-rouge"><span class="p">{</span><span class="err">object-prefix</span><span class="p">}</span><span class="err">/</span><span class="p">{</span><span class="err">object-name</span><span class="p">}</span></code>.</p>
 
-<p>Q: What is the difference between ‘Class A’ and ‘Class B’ requests?
+<p><strong>Q: What is the difference between ‘Class A’ and ‘Class B’ requests?</strong>
 A:’Class A’ requests are operations that involve modification or listing.  This includes creating buckets, uploading or copying objects, creating or changing configurations, listing buckets, and listing the contents of buckets.’Class B’ requests are those related to retrieving objects or their associated metadata/configurations from the system. There is no charge for deleting buckets or objects from the system.</p>
 
-<p>Q:  What is the best way to structure your data using Object storage such that you can ‘look’ at it and find what you are looking for?  Without a directory structure, having 1000s of files at one level seems hard to view.
+<p><strong>Q:  What is the best way to structure your data using Object storage such that you can ‘look’ at it and find what you are looking for?</strong>  Without a directory structure, having 1000s of files at one level seems hard to view.
 A:  You can use metadata associated with each object to find the objects you are looking for. The biggest advantage of object storage is the metadata associated with each object. Each object can have up to 4 MB of metadata in IBM COS.  When offloaded to a database, metadata provides excellent search capabilities.  A large number of (key, value) pairs can be stored in 4 MB.  You can also use Prefix searching to find what you are looking for. For example, if you use buckets to separate each customer data, you can use prefixes within buckets for organization. For example:  /bucket1/folder/object where ‘folder/’ is the prefix.</p>
 
-<p>Q: Can you confirm that IBM COS is ‘immediately consistent’, as opposed to ‘eventually consistent’? 
+<p><strong>Q: Can you confirm that IBM COS is ‘immediately consistent’, as opposed to ‘eventually consistent’?</strong> 
 A:  COS is ‘immediately consistent’ for data and ‘eventually consistent’ for usage accounting.</p>
 
-<p>Q:  Does data stored on IBM COS need backup?<br />
+<p><strong>Q:  Does data stored on IBM COS need backup?</strong><br />
 A:  Most likely not, especially if you are using IBM COS Cross Region resiliency option to store your objects.   We have multiple IBM COS offerings in the Cloud, some with regional resiliency and others with Cross-Region resiliency.    All offerings use erasure coded slices to distribute data across multiple sites –  our Regional offerings will do this distribution across data centers within a region and our Cross-Region offerings will do this distribution across data centers that span multiple regions.   For example, US Cross Region will distribute erasure coded object slices across Dallas, San Jose, and Washington DC data centers.</p>
 
-<p>Q:  Can IBM COS partition the data automatically for me like HDFS, so I can read the partitions in parallel, e.g. with Spark?
+<p><strong>Q:  Can IBM COS partition the data automatically for me like HDFS, so I can read the partitions in parallel, e.g. with Spark?</strong>
 A:  IBM COS supports a ranged GET on the object, so an application can do a distributed striped read type operation.  Doing the striping would be on the application to manage.</p>
 
 
@@ -519,7 +519,7 @@ A:  IBM COS supports a ranged GET on the object, so an application can do a dist
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 IBM. <a href="/crs-docs/notices.html">Notices.</a> All rights reserved. <br />
-<span>Page last updated:</span> November 18, 2016<br/> Site last generated: Jul 25, 2017 <br /><br />
+<span>Page last updated:</span> November 18, 2016<br/> Site last generated: Jul 26, 2017 <br /><br />
 <p> &nbsp; <img src="images/cos_logo.svg" alt="Company logo" style="width:100px;"/></p>
                 </div>
             </div>
