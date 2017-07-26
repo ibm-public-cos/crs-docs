@@ -453,23 +453,19 @@ $('#toc').on('click', 'a', function() {
 
   <h4 id="api-questions">API Questions</h4>
 
-<p><strong>Are COS bucket names case sensitive?</strong></p>
+<p><strong>Are COS bucket names case sensitive?</strong>
+Bucket names are required to be DNS addressable, and thus not case sensitive.</p>
 
-<p>Bucket names are required to be DNS addressable, and thus not case sensitive.</p>
-
-<p><strong>What is the maximum number of characters that can be used in an Object name?</strong></p>
-
-<p>1024</p>
+<p><strong>What is the maximum number of characters that can be used in an Object name?</strong>
+1024</p>
 
 <h4 id="offering-questions">Offering Questions</h4>
 
-<p><strong>Do we offer a free tier option for IBM Cloud Object Storage?</strong></p>
+<p><strong>Do we offer a free tier option for IBM Cloud Object Storage?</strong>
+Yes, use promo code <code class="highlighter-rouge">COSFREE</code> to obtain 25 GB of storage and a bunch of operations per month.</p>
 
-<p>Yes, use promo code <code class="highlighter-rouge">COSFREE</code> to obtain 25 GB of storage and a bunch of operations per month.</p>
-
-<p><strong>Is there a 100-bucket limit to an account?  What happens if we need more?</strong></p>
-
-<p>Yes, 100 is the current bucket limit.  Generally, prefixes are a better way to group together objects in a bucket, unless the data needs to be in a different region or storage class.  For example, to group patient records, you would use one prefix per patient. If this is not a workable solution, contact customer support.</p>
+<p><strong>Is there a 100-bucket limit to an account?  What happens if we need more?</strong>
+Yes, 100 is the current bucket limit.  Generally, prefixes are a better way to group together objects in a bucket, unless the data needs to be in a different region or storage class.  For example, to group patient records, you would use one prefix per patient. If this is not a workable solution, contact customer support.</p>
 
 <p><strong>If I want to store my data using IBM COS Vault or Cold Vault, do I need to create another account?</strong></p>
 
