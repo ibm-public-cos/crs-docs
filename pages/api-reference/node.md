@@ -21,7 +21,7 @@ aws_secret_access_key = {Secret Access Key}
 
 The `aws-sdk` package provides complete access to the S3 API and can source credentials from the `~/.aws/credentials` file referenced above.  The IBM COS endpoint must be specified when creating a client as shown in the following basic example. 
 
-{% include note.html content="The AWS SDK for Java is comprehensive, and has features and capabilities not described in this guide.  For detailed class and method documentation, as well as the source code, see the [GitHub repository](https://github.com/aws/aws-sdk-js)." %}
+{% include note.html content="The AWS SDK for Node.js is comprehensive, and has features and capabilities not described in this guide.  For detailed class and method documentation, as well as the source code, see the [GitHub repository](https://github.com/aws/aws-sdk-js)." %}
 
 
 ### Creating a new bucket
