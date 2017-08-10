@@ -43,6 +43,10 @@ entries:
 
     - title: Using the APIs
       url: /using-the-api
+      output: web, pdf
+
+    - title: Web Gallery Tutorial
+      url: /gallery-tutorial
       output: web, `pdf
 
   #  - title: Next steps
@@ -83,9 +87,9 @@ entries:
           url: /java
           output: web, pdf 
     
-    #   - title: Node.js
-    #     url: /node
-    #     output: web, pdf 
+        - title: Node.js
+          url: /node
+          output: web, pdf 
 
   - title: HOW TO
     output: web, pdf
