@@ -106,6 +106,12 @@
   
   
   <url>
+    <loc>/node</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>/notices.html</loc>
   </url>
   
@@ -187,6 +193,12 @@
   
   <url>
     <loc>/using-the-api</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>/gallery-tutorial</loc>
   </url>
   
   

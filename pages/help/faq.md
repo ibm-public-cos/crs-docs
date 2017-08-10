@@ -14,17 +14,21 @@ toc: true
 #### API Questions
 
 **Are COS bucket names case sensitive?**
+
 Bucket names are required to be DNS addressable, and thus not case sensitive.
 
 **What is the maximum number of characters that can be used in an Object name?**
+
 1024
 
 #### Offering Questions
 
 **Do we offer a free tier option for IBM Cloud Object Storage?**
+
 Yes, use promo code `COSFREE` to obtain 25 GB of storage and a bunch of operations per month. 
 
 **Is there a 100-bucket limit to an account?  What happens if we need more?**
+
 Yes, 100 is the current bucket limit.  Generally, prefixes are a better way to group together objects in a bucket, unless the data needs to be in a different region or storage class.  For example, to group patient records, you would use one prefix per patient. If this is not a workable solution, contact customer support.
 
 **If I want to store my data using IBM COS Vault or Cold Vault, do I need to create another account?**
