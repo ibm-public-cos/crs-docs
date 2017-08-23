@@ -19,6 +19,8 @@ IBM Cloud Object Storage uses an innovative approach for cost-effectively storin
 
 Objects in IBM COS are encrypted at rest. This technology individually encrypts each object using per-object generated keys. These keys are secured and reliably stored using the same Information Dispersal Algorithms that protect object data using an All-or-Nothing Transform (AONT), which prevents key data from being disclosed if individual nodes or hard drives are compromised.
 
+While the per-object generated keys are highly secure, some applications will require the use of "customer managed" keys. Often referred to as Server-Side Encryption using Customer managed keys (SSE-C), this allows for applications to further grant and restrict access to individual objects by rotating encryption keys.  For more information on SSE-C, see the [API reference]({{ site.baseurl }}/api-reference#upload-an-object).
+
 Storage can be accessed over HTTPS, and internally storage devices are certified and communicate with each other using TLS.
 
 

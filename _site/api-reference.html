@@ -471,29 +471,6 @@
    
 
     
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
-
-    
 
 
     
@@ -507,7 +484,7 @@ $('#toc').on('click', 'a', function() {
 <h3 id="common-headers">Common Headers</h3>
 
 <h4 id="common-request-headers">Common Request Headers</h4>
-<p>The following table describes supported common request headers. COS ignores any common headers not listed below if sent in a request, although some requests may support other headers as defined in this documentation.  More information about creating the authorization header can be found in the <a href="/crs-docs/manage-access#authentication">“Authentication”</a>section</p>
+<p>The following table describes supported common request headers. COS ignores any common headers not listed below if sent in a request, although some requests may support other headers as defined in this documentation.  More information about creating the authorization header can be found in the <a href="/crs-docs/manage-access#authentication">“Authentication”</a> section</p>
 
 <table class="opstable">
   <thead>
@@ -3137,7 +3114,7 @@ DELETE https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 IBM. <a href="/crs-docs/notices.html">Notices.</a> All rights reserved. <br />
-<span>Page last updated:</span> November 18, 2016<br/> Site last generated: Aug 22, 2017 <br /><br />
+<span>Page last updated:</span> November 18, 2016<br/> Site last generated: Aug 23, 2017 <br /><br />
 <p> &nbsp; <img src="images/cos_logo.svg" alt="Company logo" style="width:100px;"/></p>
                 </div>
             </div>
