@@ -594,7 +594,6 @@ $('#toc').on('click', 'a', function() {
       <th>Error Code</th>
       <th>Description</th>
       <th>HTTP Status Code</th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
@@ -602,307 +601,316 @@ $('#toc').on('click', 'a', function() {
       <td>AccessDenied</td>
       <td>Access Denied</td>
       <td>403 Forbidden</td>
-      <td> </td>
+    </tr>
+    <tr>
+      <td>AccessDenied</td>
+      <td>Access Denied - Server-Side Encryption with Customer-Provided Keys is not enabled for this vault.</td>
+      <td>403 Forbidden</td>
     </tr>
     <tr>
       <td>BadDigest</td>
       <td>The Content-MD5 you specified did not match what we received.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>BucketAlreadyExists</td>
       <td>The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.</td>
       <td>409 Conflict</td>
-      <td> </td>
     </tr>
     <tr>
       <td>BucketNotEmpty</td>
       <td>The bucket you tried to delete is not empty.</td>
       <td>409 Conflict</td>
-      <td> </td>
     </tr>
     <tr>
       <td>CredentialsNotSupported</td>
       <td>This request does not support credentials.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>EntityTooSmall</td>
       <td>Your proposed upload is smaller than the minimum allowed object size.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>EntityTooLarge</td>
       <td>Your proposed upload exceeds the maximum allowed object size.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>IncompleteBody</td>
       <td>You did not provide the number of bytes specified by the Content-Length HTTP header.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>IncorrectNumberOfFilesInPostRequest</td>
       <td>POST requires exactly one file upload per request.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>InlineDataTooLarge</td>
       <td>Inline data exceeds the maximum allowed size.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>InternalError</td>
       <td>We encountered an internal error. Please try again.</td>
       <td>500 Internal Server Error</td>
-      <td> </td>
     </tr>
     <tr>
       <td>InvalidAccessKeyId</td>
       <td>The AWS access key Id you provided does not exist in our records.</td>
       <td>403 Forbidden</td>
-      <td> </td>
     </tr>
     <tr>
       <td>InvalidArgument</td>
       <td>Invalid Argument</td>
       <td>400 Bad Request</td>
-      <td> </td>
+    </tr>
+    <tr>
+      <td>InvalidArgument</td>
+      <td>Requests specifying Server-Side Encryption with Customer-Provided Keys must be made over a secure connection.</td>
+      <td>400 Bad Request</td>
+    </tr>
+    <tr>
+      <td>InvalidArgument</td>
+      <td>Requests specifying Server-Side Encryption with Customer-Provided Keys must provide an appropriate secret key.</td>
+      <td>400 Bad Request</td>
+    </tr>
+    <tr>
+      <td>InvalidArgument</td>
+      <td>Requests specifying Server-Side Encryption with Customer-Provided Keys must provide the client calculated MD5 of the secret key.</td>
+      <td>400 Bad Request</td>
+    </tr>
+    <tr>
+      <td>InvalidArgument</td>
+      <td>The MD5 hash of the secret key was improperly encoded. The MD5 hash must be Base64 encoded.</td>
+      <td>400 Bad Request</td>
+    </tr>
+    <tr>
+      <td>InvalidArgument</td>
+      <td>The calculated MD5 hash of the key did not match the hash that was provided.</td>
+      <td>400 Bad Request</td>
     </tr>
     <tr>
       <td>InvalidBucketName</td>
       <td>The specified bucket is not valid.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>InvalidBucketState</td>
       <td>The request is not valid with the current state of the bucket.</td>
       <td>409 Conflict</td>
-      <td> </td>
     </tr>
     <tr>
       <td>InvalidDigest</td>
       <td>The Content-MD5 you specified is not valid.</td>
       <td>400 Bad Request</td>
-      <td> </td>
+    </tr>
+    <tr>
+      <td>InvalidEncryptionAlgorithmError</td>
+      <td>The Encryption request you specified is not valid. Supported value: AES256.</td>
+      <td>400 Bad Request</td>
     </tr>
     <tr>
       <td>InvalidLocationConstraint</td>
       <td>The specified location constraint is not valid. For more information about regions, see How to Select a Region for Your Buckets.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>InvalidObjectState</td>
       <td>The operation is not valid for the current state of the object.</td>
       <td>403 Forbidden</td>
-      <td> </td>
     </tr>
     <tr>
       <td>InvalidPart</td>
       <td>One or more of the specified parts could not be found. The part might not have been uploaded, or the specified entity tag might not have matched the part’s entity tag.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>InvalidPartOrder</td>
       <td>The list of parts was not in ascending order. Parts list must specified in order by part number.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>InvalidRange</td>
       <td>The requested range cannot be satisfied.</td>
       <td>416 Requested Range Not Satisfiable</td>
-      <td> </td>
     </tr>
     <tr>
       <td>InvalidRequest</td>
       <td>Please use AWS4-HMAC-SHA256.</td>
       <td>400 Bad Request</td>
-      <td> </td>
+    </tr>
+    <tr>
+      <td>InvalidRequest</td>
+      <td>The object was stored using a form of Server-Side Encryption. The correct parameters must be provided to retrieve the object.</td>
+      <td>400 Bad Request</td>
+    </tr>
+    <tr>
+      <td>InvalidRequest</td>
+      <td>The encryption parameters are not applicable to this object.</td>
+      <td>400 Bad Request</td>
+    </tr>
+    <tr>
+      <td>InvalidRequest</td>
+      <td>The object was stored using a form of Server-Side Encryption. The correct parameters must be provided to retrieve the object.</td>
+      <td>400 Bad Request</td>
     </tr>
     <tr>
       <td>InvalidSecurity</td>
       <td>The provided security credentials are not valid.</td>
       <td>403 Forbidden</td>
-      <td> </td>
     </tr>
     <tr>
       <td>InvalidURI</td>
       <td>Couldn’t parse the specified URI.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>KeyTooLong</td>
       <td>Your key is too long.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>MalformedACLError</td>
       <td>The XML you provided was not well-formed or did not validate against our published schema.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>MalformedPOSTRequest</td>
       <td>The body of your POST request is not well-formed multipart/form-data.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>MalformedXML</td>
       <td>This happens when the user sends malformed xml (xml that doesn’t conform to the published xsd) for the configuration. The error message is, “The XML you provided was not well-formed or did not validate against our published schema.”</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>MaxMessageLengthExceeded</td>
       <td>Your request was too big.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>MaxPostPreDataLengthExceededError</td>
       <td>Your POST request fields preceding the upload file were too large.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>MetadataTooLarge</td>
       <td>Your metadata headers exceed the maximum allowed metadata size.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>MethodNotAllowed</td>
       <td>The specified method is not allowed against this resource.</td>
       <td>405 Method Not Allowed</td>
-      <td> </td>
     </tr>
     <tr>
       <td>MissingContentLength</td>
       <td>You must provide the Content-Length HTTP header.</td>
       <td>411 Length Required</td>
-      <td> </td>
     </tr>
     <tr>
       <td>MissingRequestBodyError</td>
       <td>This happens when the user sends an empty xml document as a request. The error message is, “Request body is empty.”</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>NoSuchBucket</td>
       <td>The specified bucket does not exist.</td>
       <td>404 Not Found</td>
-      <td> </td>
     </tr>
     <tr>
       <td>NoSuchKey</td>
       <td>The specified key does not exist.</td>
       <td>404 Not Found</td>
-      <td> </td>
     </tr>
     <tr>
       <td>NoSuchUpload</td>
       <td>The specified multipart upload does not exist. The upload ID might be invalid, or the multipart upload might have been aborted or completed.</td>
       <td>404 Not Found</td>
-      <td> </td>
     </tr>
     <tr>
       <td>NotImplemented</td>
       <td>A header you provided implies functionality that is not implemented.</td>
       <td>501 Not Implemented</td>
-      <td> </td>
     </tr>
     <tr>
       <td>OperationAborted</td>
       <td>A conflicting conditional operation is currently in progress against this resource. Try again.</td>
       <td>409 Conflict</td>
-      <td> </td>
     </tr>
     <tr>
       <td>PreconditionFailed</td>
       <td>At least one of the preconditions you specified did not hold.</td>
-      <td>412 Precondition</td>
-      <td>Failed</td>
+      <td>412 Precondition Failed</td>
     </tr>
     <tr>
       <td>Redirect</td>
       <td>Temporary redirect.</td>
       <td>307 Moved Temporarily</td>
-      <td> </td>
     </tr>
     <tr>
       <td>RequestIsNotMultiPartContent</td>
       <td>Bucket POST must be of the enclosure-type multipart/form-data.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>RequestTimeout</td>
       <td>Your socket connection to the server was not read from or written to within the timeout period.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>RequestTimeTooSkewed</td>
       <td>The difference between the request time and the server’s time is too large.</td>
       <td>403 Forbidden</td>
-      <td> </td>
     </tr>
     <tr>
       <td>SignatureDoesNotMatch</td>
       <td>The request signature we calculated does not match the signature you provided. Check your AWS secret access key and signing method. For more information, see REST Authentication and SOAP Authentication for details.</td>
       <td>403 Forbidden</td>
-      <td> </td>
     </tr>
     <tr>
       <td>ServiceUnavailable</td>
       <td>Reduce your request rate.</td>
       <td>503 Service Unavailable</td>
-      <td> </td>
     </tr>
     <tr>
       <td>SlowDown</td>
       <td>Reduce your request rate.</td>
       <td>503 Slow Down</td>
-      <td> </td>
     </tr>
     <tr>
       <td>TemporaryRedirect</td>
       <td>You are being redirected to the bucket while DNS updates.</td>
       <td>307 Moved Temporarily</td>
-      <td> </td>
     </tr>
     <tr>
       <td>TooManyBuckets</td>
       <td>You have attempted to create more buckets than allowed.</td>
       <td>400 Bad Request</td>
-      <td> </td>
     </tr>
     <tr>
       <td>UnexpectedContent</td>
       <td>This request does not support content.</td>
       <td>400 Bad Request</td>
-      <td> </td>
+    </tr>
+    <tr>
+      <td>UnresolvableGrantByEmailAddress</td>
+      <td>The email address you provided does not match any account on record.</td>
+      <td>400 Bad Request</td>
     </tr>
     <tr>
       <td>UserKeyMustBeSpecified</td>
       <td>The bucket POST must contain the specified field name. If it is specified, check the order of the fields.</td>
       <td>400 Bad Request</td>
-      <td> </td>
+    </tr>
+    <tr>
+      <td>VaultQuotaExceeded</td>
+      <td>The capacity used on the target vault has exceeded a hard quota</td>
+      <td>507 Insufficient Storage</td>
     </tr>
   </tbody>
 </table>
@@ -911,7 +919,7 @@ $('#toc').on('click', 'a', function() {
 
 <h4 id="list-buckets-belonging-to-an-account">List buckets belonging to an account</h4>
 
-<p>A <code class="highlighter-rouge">GET</code> issued to the endpoint root returns a list of buckets associated with the requesting account. This operation does not make use of operation specific headers, query parameters, or payload elements.</p>
+<p>A <code class="highlighter-rouge">GET</code> issued to the endpoint root returns a list of buckets owned by the requesting account.  This operation does not make use of operation specific headers, query parameters, or payload elements.</p>
 
 <h5 id="syntax">Syntax</h5>
 
@@ -934,8 +942,8 @@ $('#toc').on('click', 'a', function() {
 <div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</span>
 <span class="nt">&lt;ListAllMyBucketsResult</span> <span class="na">xmlns=</span><span class="s">"http://s3.amazonaws.com/doc/2006-03-01/"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;Owner&gt;</span>
-        <span class="nt">&lt;ID&gt;</span>{account-id}<span class="nt">&lt;/ID&gt;</span>
-        <span class="nt">&lt;DisplayName&gt;</span>{account-id}<span class="nt">&lt;/DisplayName&gt;</span>
+        <span class="nt">&lt;ID&gt;</span>{access-key}<span class="nt">&lt;/ID&gt;</span>
+        <span class="nt">&lt;DisplayName&gt;</span>{access-key}<span class="nt">&lt;/DisplayName&gt;</span>
     <span class="nt">&lt;/Owner&gt;</span>
     <span class="nt">&lt;Buckets&gt;</span>
         <span class="nt">&lt;Bucket&gt;</span>
@@ -1024,7 +1032,7 @@ Authorization: {authorization-string}
 
 <h4 id="create-a-new-bucket">Create a new bucket</h4>
 
-<p>A <code class="highlighter-rouge">PUT</code> issued to the endpoint root will create a bucket when a string is provided.  Bucket names must be unique, and accounts are limited to 100 buckets each.  Bucket names must be DNS-compliant; names between 3 and 63 characters long must be made of lowercase letters, numbers, and dashes. Bucket names must begin and end with a lowercase letter or number.  Bucket names resembling IP addresses are not allowed. This operation does not make use of operation specific headers or query parameters.</p>
+<p>A <code class="highlighter-rouge">PUT</code> issued to the endpoint root followed by a string will create a bucket using that string for a name.  Bucket names must be unique, and storage instances are limited to 1,000 buckets.  Bucket names may be required to be DNS-compliant depending on settings in the COS Manager; if so, names must be between 3 and 63 characters long must be made of lowercase letters, numbers, and dashes. Bucket names must begin and end with a lowercase letter or number.  Bucket names resembling IP addresses are not allowed. This operation does not make use of operation specific headers or query parameters.</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using third-party tools or SDKs may enforce manually setting a <code class="highlighter-rouge">LocationConstraint</code> when creating a bucket. Unlike AWS S3, IBM COS uses this value to indicate the storage class of an object. This field has no relation to physical geography or region - those values are provided within the endpoint used to connect to the service. Currently, the only permitted values for <code class="highlighter-rouge">LocationCostraint</code> are: <br />
     <code class="highlighter-rouge">us-standard</code> / <code class="highlighter-rouge">us-vault</code> / <code class="highlighter-rouge">us-cold</code> / <code class="highlighter-rouge">us-flex</code> <br />
@@ -1044,6 +1052,16 @@ Authorization: {authorization-string}
 
 <div class="language-shell highlighter-rouge"><pre class="highlight"><code>PUT https://<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>bucket-name<span class="o">}</span> <span class="c"># path style</span>
 PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span> <span class="c"># virtual host style</span>
+</code></pre>
+</div>
+
+<h4 id="optional-payload-elements">Optional payload elements</h4>
+
+<p>If an XML block specifying a <code class="highlighter-rouge">LocationConstraint</code> is provided it must correspond with a valid provisioning code (e.g. <code class="highlighter-rouge">us-standard</code>).  If the request payload is left empty, the default provisioning code is used.</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;CreateBucketConfiguration&gt;</span>
+  <span class="nt">&lt;LocationConstraint&gt;</span>{provisioning-code}<span class="nt">&lt;/LocationConstraint&gt;</span>
+<span class="nt">&lt;/CreateBucketConfiguration&gt;</span>
 </code></pre>
 </div>
 
@@ -1313,7 +1331,7 @@ Content-Length: 151
 
 <h4 id="retrieve-a-buckets-headers">Retrieve a bucket’s headers</h4>
 
-<p>A <code class="highlighter-rouge">HEAD</code> issued to a bucket will return the headers for that bucket.</p>
+<p>A <code class="highlighter-rouge">HEAD</code> issued to a bucket resource will return the headers for that bucket. This operation does not make use of operation specific headers, query parameters, or payload elements.</p>
 
 <h5 id="syntax-5">Syntax</h5>
 
@@ -1474,7 +1492,7 @@ GET https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 
 <h4 id="delete-a-bucket">Delete a bucket</h4>
 
-<p>A <code class="highlighter-rouge">DELETE</code> issued to an empty bucket deletes the bucket. After deleting a bucket the name will be held in reserve by the system for 10 minutes, after which it will be released for re-use.  <em>Only empty buckets can be deleted.</em></p>
+<p>A <code class="highlighter-rouge">DELETE</code> issued to an empty bucket deletes the bucket. After deleting a bucket the name will be held in reserve by the system for 10 minutes, after which it will be released for re-use.  <em>Only empty buckets can be deleted.</em> This operation does not make use of operation specific headers, query parameters, or payload elements.</p>
 
 <h5 id="syntax-7">Syntax</h5>
 
@@ -1521,11 +1539,90 @@ DELETE https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span
 
 <h4 id="create-an-access-control-list-for-a-bucket">Create an access control list for a bucket</h4>
 
-<p>A <code class="highlighter-rouge">PUT</code> issued to a bucket with the proper parameters creates an access control list (ACL) for that bucket.  Access control lists allow for granting different sets of permissions to different storage accounts using the account’s ID, or by using a pre-made ACL.</p>
+<p>A <code class="highlighter-rouge">PUT</code> issued to a bucket with the necessary query parameter creates or replaces an access control list (ACL) for that bucket.  Access control lists allow for granting different sets of permissions to different storage accounts using the account’s ID, or by using a pre-made ACL.</p>
 
 <div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> Credentials are generated for each storage account, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a given user, only to a storage account. However, <code class="highlighter-rouge">public-read-write</code> allows any other COS storage account to access the resource, as well as the general public. </div>
 
-<p>ACLs can use pre-made permissions sets (or ‘canned ACLs’) or be customized in the body of the request. Pre-made ACLs are specified using the <code class="highlighter-rouge">x-amz-acl</code> header with <code class="highlighter-rouge">private</code>, <code class="highlighter-rouge">public-read</code>, or <code class="highlighter-rouge">public-read-write</code> as the value. Custom ACLs are specified using XML in the request body and can grant <code class="highlighter-rouge">READ</code>, <code class="highlighter-rouge">WRITE</code>, <code class="highlighter-rouge">READ_ACP</code> (read ACL), <code class="highlighter-rouge">WRITE_ACP</code> (write ACL), or <code class="highlighter-rouge">FULL_CONTROL</code> permissions to a given storage account.</p>
+<p>ACLs can use pre-made permissions sets (or ‘canned ACLs’) or be customized in the body of the request. Pre-made ACLs are specified using the <code class="highlighter-rouge">x-amz-acl</code> header and custom ACLs are specified using XML in the request payload. Only one method (header or payload) can be used in a single request.</p>
+
+<p>This operation does not make use of additional operation specific query parameters.</p>
+
+<p>ACL grantees must be other COS storage instances, and their UUID can be found along with credentials in the web portal.</p>
+
+<p>The assigned permissions behave as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Permission</th>
+      <th>When granted on a bucket</th>
+      <th>When granted on an object</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>READ</td>
+      <td>Allows grantee to list and read all objects in bucket</td>
+      <td>Allows grantee to read object data and metadata</td>
+    </tr>
+    <tr>
+      <td>WRITE</td>
+      <td>Allows grantee to create, overwrite and delete any object in bucket. Cannot be granted independently from READ permission.</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>READ_ACP</td>
+      <td>This permission does not exist for buckets; default setting is FULL_CONTROL</td>
+      <td>Allows grantee to read object ACL</td>
+    </tr>
+    <tr>
+      <td>WRITE_ACP</td>
+      <td>Default setting is FULL_CONTROL</td>
+      <td>Allows grantee to write ACL for applicable object</td>
+    </tr>
+    <tr>
+      <td>FULL_CONTROL</td>
+      <td>Allows grantee READ, WRITE, READ_ACP and WRITE_ACP permissions on bucket</td>
+      <td>Allows grantee READ, READ_ACP and WRITE_ACP permissions on object</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Note:</strong> The <code class="highlighter-rouge">READ_ACP</code>, <code class="highlighter-rouge">WRITE_ACP</code>, and <code class="highlighter-rouge">FULL_CONTROL</code> permissions are implied by the bucket “own” permission. When any of these permissions are assigned to a grantee in a bucket ACL, that grantee will be granted the bucket “own” permission.</p>
+
+<p>The following canned ACLs are supported by IBM COS.  Values not listed below are not supported.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Canned ACL</th>
+      <th>Applies to</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>private</td>
+      <td>Bucket and object</td>
+      <td>When set on a bucket, the requestor is interpreted as the bucket owner.</td>
+    </tr>
+    <tr>
+      <td>public-read</td>
+      <td>Bucket and object</td>
+      <td>When set on a bucket, the requestor is interpreted as the bucket owner.</td>
+    </tr>
+    <tr>
+      <td>public-read-write</td>
+      <td>Bucket and object</td>
+      <td>When set on a bucket, the requestor is interpreted as the bucket owner.</td>
+    </tr>
+    <tr>
+      <td>authenticated-read</td>
+      <td>Bucket and object</td>
+      <td>Supported when set on an object only. Not supported as a bucket ACL.</td>
+    </tr>
+  </tbody>
+</table>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> <code class="highlighter-rouge">READ</code> access, including <code class="highlighter-rouge">public-read</code>, when granted on a bucket does not allow for the actual access of objects themselves, only the ability to list them.</div>
 
@@ -1563,7 +1660,7 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 
 <h5 id="sample-request-custom-acl">Sample request Custom ACL</h5>
 
-<p>This is an example of specifying a custom ACL to allow for another account to view the ACL for the “apiary” bucket, but not to list objects stored inside the bucket. Additionally, a third account is given full access to the same bucket as another element of the same ACL.</p>
+<p>This is an example of specifying a custom ACL to allow for another user using their username to view the ACL for the “apiary” bucket, but not to list objects stored inside the bucket. A third account is given full access to the same bucket as another element of the same ACL.  All authenticated users of the system can list objects in the bucket.</p>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">PUT</span> <span class="nn">/apiary?acl=</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
@@ -1613,7 +1710,7 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 
 <h4 id="retrieve-the-access-control-list-for-a-bucket">Retrieve the access control list for a bucket</h4>
 
-<p>A <code class="highlighter-rouge">GET</code> issued to a bucket with the proper parameters retrieves the ACL for a bucket.</p>
+<p>A <code class="highlighter-rouge">GET</code> issued to a bucket with the proper parameters retrieves the ACL for a bucket. This operation does not make use of operation specific headers, additional query parameters, or payload elements.</p>
 
 <h5 id="syntax-9">Syntax</h5>
 
@@ -1669,7 +1766,7 @@ GET https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 
 <h4 id="list-canceledincomplete-multipart-uploads-for-a-bucket">List canceled/incomplete multipart uploads for a bucket</h4>
 
-<p>A <code class="highlighter-rouge">GET</code> issued to a bucket with the proper parameters retrieves information about any canceled or incomplete multipart uploads for a bucket.</p>
+<p>A <code class="highlighter-rouge">GET</code> issued to a bucket with the proper parameters retrieves information about any canceled or incomplete multipart uploads for a bucket. This operation does not make use of operation specific headers, additional query parameters, or payload elements.</p>
 
 <h5 id="syntax-10">Syntax</h5>
 
@@ -1791,7 +1888,7 @@ GET https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 
 <h4 id="list-any-cross-origin-resource-sharing-configuration-for-a-bucket">List any cross-origin resource sharing configuration for a bucket</h4>
 
-<p>A <code class="highlighter-rouge">GET</code> issued to a bucket with the proper parameters retrieves information about cross-origin resource sharing (CORS) configuration for a bucket.</p>
+<p>A <code class="highlighter-rouge">GET</code> issued to a bucket with the proper parameters retrieves information about cross-origin resource sharing (CORS) configuration for a bucket. This operation does not make use of operation specific headers, additional query parameters, or payload elements.</p>
 
 <h5 id="syntax-11">Syntax</h5>
 
@@ -1833,7 +1930,7 @@ GET https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 
 <h4 id="create-a-cross-origin-resource-sharing-configuration-for-a-bucket">Create a cross-origin resource sharing configuration for a bucket</h4>
 
-<p>A <code class="highlighter-rouge">PUT</code> issued to a bucket with the proper parameters creates or replaces a cross-origin resource sharing (CORS) configuration for a bucket.</p>
+<p>A <code class="highlighter-rouge">PUT</code> issued to a bucket with the proper parameters creates or replaces a cross-origin resource sharing (CORS) configuration for a bucket. Note that in addition to a SHA256 hash of the body, a <code class="highlighter-rouge">Content-MD5</code> header is required as well. This operation does not make use of operation specific headers or additional query parameters.</p>
 
 <h5 id="syntax-12">Syntax</h5>
 
@@ -1841,6 +1938,29 @@ GET https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span>?cors<span class="o">=</span> <span class="c"># virtual host style</span>
 </code></pre>
 </div>
+
+<h4 id="optional-payload-elements-1">Optional payload elements</h4>
+
+<p>In the XML block defining the key CORS elements (<code class="highlighter-rouge">AllowedOrigin</code> and <code class="highlighter-rouge">AllowedMethod</code>) there are two optional elements that can be optionally specified.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MaxAgeSeconds</td>
+      <td>Time in seconds that the browser will cache the response to the pre-flight OPTIONS request for the specified resource.</td>
+    </tr>
+    <tr>
+      <td>ExposeHeader</td>
+      <td>Defines specific headers that will be exposed to external applications.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h5 id="sample-request-12">Sample request</h5>
 
@@ -1913,18 +2033,49 @@ DELETE https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span
 
 <h4 id="upload-an-object">Upload an object</h4>
 
-<p>A <code class="highlighter-rouge">PUT</code> given a path to an object uploads the request body as an object. A SHA256 hash of the object is a required header.  All objects are limited to 5TB in size.</p>
+<p>A <code class="highlighter-rouge">PUT</code> given a path to an object uploads the request body as an object. A SHA256 hash of the object is a required header.  All objects are limited to 5TB in size. This operation does not make use of operation specific query parameters, or payload elements.</p>
 
-<h5 id="syntax-14">Syntax</h5>
+<h6 id="syntax-14">Syntax</h6>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>PUT https://<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>bucket-name<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span> <span class="c"># path style</span>
 PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span> <span class="c"># virtual host style</span>
 </code></pre>
 </div>
 
-<h5 id="sample-request-14">Sample request</h5>
+<h5 id="specific-headers-for-sse-c">Specific headers for SSE-C</h5>
 
-<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">PUT</span> <span class="nn">/apiary/queen-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<p>The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that <code class="highlighter-rouge">ETag</code> values in response headers are <em>not</em> the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Header</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-algorithm</code></td>
+      <td>string</td>
+      <td>This header is used to specify the algorithm and key size to use with the encryption key stored in <code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code> header. This value must be set to the string <code class="highlighter-rouge">AES256</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code></td>
+      <td>string</td>
+      <td>This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-key-MD5</code></td>
+      <td>string</td>
+      <td>This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the <code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code> has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h6 id="sample-request-14">Sample request</h6>
+
+<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">PUT</span> <span class="nn">/example-bucket/queen-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
 <span class="na">x-amz-date</span><span class="p">:</span> <span class="s">20160825T183001Z</span>
 <span class="na">x-amz-content-sha256</span><span class="p">:</span> <span class="s">309721641329cf441f3fa16ef996cf24a2505f91be3e752ac9411688e3435429</span>
@@ -1934,14 +2085,14 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 Content-Length: 533
 
  The 'queen' bee is developed from larvae selected by worker bees and fed a
- substance referred to as 'royal jelly' to accelerate sexual maturity. After a
- short while the 'queen' is the mother of nearly every bee in the hive, and
- the colony will fight fiercely to protect her.
+ substance referred to as 'royal jelly'. After a short while the 'queen' is
+ the mother of nearly every bee in the hive, and the colony will fight
+ fiercely to protect her.
 
 </code></pre>
 </div>
 
-<h5 id="sample-response-12">Sample response</h5>
+<h6 id="sample-response-12">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Thu, 25 Aug 2016 18:30:02 GMT</span>
@@ -1955,20 +2106,58 @@ Content-Length: 533
 </code></pre>
 </div>
 
+<h6 id="sample-request-using-sse-c">Sample request using SSE-C</h6>
+
+<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">PUT</span> <span class="nn">/example-bucket/queen-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
+<span class="na">x-amz-date</span><span class="p">:</span> <span class="s">20160825T183001Z</span>
+<span class="na">x-amz-content-sha256</span><span class="p">:</span> <span class="s">309721641329cf441f3fa16ef996cf24a2505f91be3e752ac9411688e3435429</span>
+<span class="na">x-amz-server-side-encryption-customer-algorithm</span><span class="p">:</span> <span class="s">AES256</span>
+<span class="na">x-amz-server-side-encryption-customer-key</span><span class="p">:</span> <span class="s">MjRCRTJCQTNDQjdFOTkyMzY0NjZEN0NBMDhGQTBGRUQwNzFBMjEwMkQyNjU4MjNEOEMyODU5MkQxQ0ZEMkQ1OQ==</span>
+<span class="na">x-amz-server-side-encryption-customer-key-MD5</span><span class="p">:</span> <span class="s">HBbrEt+ZH5iIfDNeBju03w==</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">text/plain; charset=utf-8</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">s3-api.us-geo.objectstorage.softlayer.net</span>
+
+Content-Length: 533
+
+ The 'queen' bee is developed from larvae selected by worker bees and fed a
+ substance referred to as 'royal jelly'. After a short while the 'queen' is
+ the mother of nearly every bee in the hive, and the colony will fight
+ fiercely to protect her.
+
+</code></pre>
+</div>
+
+<h6 id="sample-response-13">Sample response</h6>
+
+<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Date</span><span class="p">:</span> <span class="s">Thu, 25 Aug 2016 18:30:02 GMT</span>
+<span class="na">X-Clv-Request-Id</span><span class="p">:</span> <span class="s">9f0ca49a-ae13-4d2d-925b-117b157cf5c3</span>
+<span class="na">Accept-Ranges</span><span class="p">:</span> <span class="s">bytes</span>
+<span class="na">Server</span><span class="p">:</span> <span class="s">Cleversafe/3.9.0.121</span>
+<span class="na">X-Clv-S3-Version</span><span class="p">:</span> <span class="s">2.5</span>
+<span class="na">x-amz-request-id</span><span class="p">:</span> <span class="s">9f0ca49a-ae13-4d2d-925b-117b157cf5c3</span>
+<span class="na">ETag</span><span class="p">:</span> <span class="s">"3ca744fa96cb95e92081708887f63de5"</span>
+<span class="na">x-amz-server-side-encryption-customer-algorithm</span><span class="p">:</span> <span class="s">AES256</span>
+<span class="na">x-amz-server-side-encryption-customer-key-MD5</span><span class="p">:</span> <span class="s">HBbrEt+ZH5iIfDNeBju03w==</span>
+<span class="na">Content-Length</span><span class="p">:</span> <span class="s">0</span>
+</code></pre>
+</div>
+
 <hr />
 
 <h4 id="get-an-objects-headers">Get an object’s headers</h4>
 
-<p>A <code class="highlighter-rouge">HEAD</code> given a path to an object retrieves that object’s headers.</p>
+<p>A <code class="highlighter-rouge">HEAD</code> given a path to an object retrieves that object’s headers. This operation does not make use of operation specific query parameters or payload elements.</p>
 
-<h5 id="syntax-15">Syntax</h5>
+<h6 id="syntax-15">Syntax</h6>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>HEAD https://<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>bucket-name<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span> <span class="c"># path style</span>
 HEAD https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span> <span class="c"># virtual host style</span>
 </code></pre>
 </div>
 
-<h5 id="optional-headers">Optional headers</h5>
+<h4 id="optional-headers">Optional headers</h4>
 
 <table>
   <thead>
@@ -2007,17 +2196,48 @@ HEAD https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span c
   </tbody>
 </table>
 
-<h5 id="sample-request-15">Sample request</h5>
+<h4 id="specific-headers-for-sse-c-1">Specific headers for SSE-C</h4>
 
-<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">HEAD</span> <span class="nn">/apiary/soldier-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<p>The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Anyrequest using SSE-C headers must be sent using SSL. Note that <code class="highlighter-rouge">ETag</code> values in response headers are <em>not</em> the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Header</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-algorithm</code></td>
+      <td>string</td>
+      <td>This header is used to specify the algorithm and key size to use with the encryption key stored in <code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code> header. This value must be set to the string <code class="highlighter-rouge">AES256</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code></td>
+      <td>string</td>
+      <td>This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-key-MD5</code></td>
+      <td>string</td>
+      <td>This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the <code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code> has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h6 id="sample-request-15">Sample request</h6>
+
+<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">HEAD</span> <span class="nn">/example-bucket/soldier-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
 <span class="na">x-amz-date</span><span class="p">:</span> <span class="s">20160825T183244Z</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">s3-api.sjc-us-geo.objectstorage.softlayer.net</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">s3-api.us-geo.objectstorage.softlayer.net</span>
 
 </code></pre>
 </div>
 
-<h5 id="sample-response-13">Sample response</h5>
+<h6 id="sample-response-14">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Thu, 25 Aug 2016 18:32:44 GMT</span>
@@ -2037,9 +2257,9 @@ HEAD https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span c
 
 <h4 id="download-an-object">Download an object</h4>
 
-<p>A <code class="highlighter-rouge">GET</code> given a path to an object downloads the object.</p>
+<p>A <code class="highlighter-rouge">GET</code> given a path to an object downloads the object. This operation does not make use of operation specific query parameters or payload elements.</p>
 
-<h5 id="syntax-16">Syntax</h5>
+<h6 id="syntax-16">Syntax</h6>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>GET https://<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>bucket-name<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span> <span class="c"># path style</span>
 GET https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span> <span class="c"># virtual host style</span>
@@ -2085,9 +2305,40 @@ GET https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
   </tbody>
 </table>
 
-<h5 id="sample-request-16">Sample request</h5>
+<h4 id="specific-headers-for-sse-c-2">Specific headers for SSE-C</h4>
 
-<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">GET</span> <span class="nn">/apiary/worker-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<p>The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that <code class="highlighter-rouge">ETag</code> values in response headers are <em>not</em> the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Header</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-algorithm</code></td>
+      <td>string</td>
+      <td>This header is used to specify the algorithm and key size to use with the encryption key stored in <code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code> header. This value must be set to the string <code class="highlighter-rouge">AES256</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code></td>
+      <td>string</td>
+      <td>This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-key-MD5</code></td>
+      <td>string</td>
+      <td>This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the <code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code> has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h6 id="sample-request-16">Sample request</h6>
+
+<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">GET</span> <span class="nn">/example-bucket/worker-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
 <span class="na">x-amz-date</span><span class="p">:</span> <span class="s">20160825T183244Z</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">s3-api.us-geo.objectstorage.softlayer.net</span>
@@ -2095,7 +2346,7 @@ GET https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 </code></pre>
 </div>
 
-<h5 id="sample-response-14">Sample response</h5>
+<h6 id="sample-response-15">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Thu, 25 Aug 2016 18:34:25 GMT</span>
@@ -2103,7 +2354,6 @@ GET https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 <span class="na">Accept-Ranges</span><span class="p">:</span> <span class="s">bytes</span>
 <span class="na">Server</span><span class="p">:</span> <span class="s">Cleversafe/3.9.0.121</span>
 <span class="na">X-Clv-S3-Version</span><span class="p">:</span> <span class="s">2.5</span>
-<span class="na">x-amz-request-id</span><span class="p">:</span> <span class="s">116dcd6b-215d-4a81-bd30-30291fa38f93</span>
 <span class="na">ETag</span><span class="p">:</span> <span class="s">"d34d8aada2996fc42e6948b926513907"</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">text/plain; charset=UTF-8</span>
 <span class="na">Last-Modified</span><span class="p">:</span> <span class="s">Thu, 25 Aug 2016 17:46:53 GMT</span>
@@ -2120,25 +2370,25 @@ GET https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 
 <h4 id="delete-an-object">Delete an object</h4>
 
-<p>A <code class="highlighter-rouge">DELETE</code> given a path to an object deletes an object.</p>
+<p>A <code class="highlighter-rouge">DELETE</code> given a path to an object deletes an object. This operation does not make use of operation specific query parameters, headers, or payload elements.</p>
 
-<h5 id="syntax-17">Syntax</h5>
+<h6 id="syntax-17">Syntax</h6>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>DELETE https://<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>bucket-name<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span> <span class="c"># path style</span>
 DELETE https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span> <span class="c"># virtual host style</span>
 </code></pre>
 </div>
 
-<h5 id="sample-request-17">Sample request</h5>
+<h6 id="sample-request-17">Sample request</h6>
 
-<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">DELETE</span> <span class="nn">/apiary/soldier-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">DELETE</span> <span class="nn">/example-bucket/soldier-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">s3-api.sjc-us-geo.objectstorage.softlayer.net</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">s3-api.us-geo.objectstorage.softlayer.net</span>
 
 </code></pre>
 </div>
 
-<h5 id="sample-response-15">Sample response</h5>
+<h6 id="sample-response-16">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">204</span> <span class="ne">No Content</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Thu, 25 Aug 2016 17:44:57 GMT</span>
@@ -2146,7 +2396,6 @@ DELETE https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span
 <span class="na">Accept-Ranges</span><span class="p">:</span> <span class="s">bytes</span>
 <span class="na">Server</span><span class="p">:</span> <span class="s">Cleversafe/3.9.0.121</span>
 <span class="na">X-Clv-S3-Version</span><span class="p">:</span> <span class="s">2.5</span>
-<span class="na">x-amz-request-id</span><span class="p">:</span> <span class="s">8ff4dc32-a6f0-447f-86cf-427b564d5855</span>
 </code></pre>
 </div>
 
@@ -2154,18 +2403,18 @@ DELETE https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span
 
 <h4 id="deleting-multiple-objects">Deleting multiple objects</h4>
 
-<p>A <code class="highlighter-rouge">POST</code> given a path to an bucket and proper parameters will delete a specified set of objects.</p>
+<p>A <code class="highlighter-rouge">POST</code> given a path to an bucket and proper parameters will delete a specified set of objects.  This requires a <code class="highlighter-rouge">Content-MD5</code> header in addition to the <code class="highlighter-rouge">x-amz-content-sha256</code> header. This operation does not make use of operation specific query parameters, headers, or payload elements.</p>
 
-<h5 id="syntax-18">Syntax</h5>
+<h6 id="syntax-18">Syntax</h6>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>POST https://<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>bucket-name<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span>?delete<span class="o">=</span> <span class="c"># path style</span>
 POST https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span>?delete<span class="o">=</span> <span class="c"># virtual host style</span>
 </code></pre>
 </div>
 
-<h5 id="sample-request-18">Sample request</h5>
+<h6 id="sample-request-18">Sample request</h6>
 
-<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">POST</span> <span class="nn">/apiary?delete=</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">POST</span> <span class="nn">/example?delete=</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">s3-api.us-geo.objectstorage.softlayer.net</span>
 <span class="na">x-amz-date</span><span class="p">:</span> <span class="s">20161205T231624Z</span>
@@ -2187,7 +2436,7 @@ POST https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span c
 </code></pre>
 </div>
 
-<h5 id="sample-response-16">Sample response</h5>
+<h6 id="sample-response-17">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Wed, 30 Nov 2016 18:54:53 GMT</span>
@@ -2216,16 +2465,16 @@ POST https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span c
 
 <h4 id="copy-an-object">Copy an object</h4>
 
-<p>A <code class="highlighter-rouge">PUT</code> given a path to a new object creates a new copy of another object specified by the <code class="highlighter-rouge">x-amz-copy-source</code> header. Unless otherwise altered the metadata remains the same, although any ACL is reset to <code class="highlighter-rouge">private</code> for the  account creating the copy.</p>
+<p>A <code class="highlighter-rouge">PUT</code> given a path to a new object creates a new copy of another object specified by the <code class="highlighter-rouge">x-amz-copy-source</code> header. Unless otherwise altered the metadata remains the same, although any ACL is reset to <code class="highlighter-rouge">private</code> for the  account creating the copy. This operation does not make use of operation specific query parameters or payload elements.</p>
 
-<h5 id="syntax-19">Syntax</h5>
+<h6 id="syntax-19">Syntax</h6>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>PUT https://<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>bucket-name<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span> <span class="c"># path style</span>
 PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span> <span class="c"># virtual host style</span>
 </code></pre>
 </div>
 
-<h5 id="optional-headers-2">Optional headers</h5>
+<h4 id="optional-headers-2">Optional headers</h4>
 
 <table>
   <thead>
@@ -2264,11 +2513,44 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
   </tbody>
 </table>
 
-<h5 id="sample-request-19">Sample request</h5>
+<h4 id="specific-headers-for-sse-c-3">Specific headers for SSE-C</h4>
 
-<p>This basic example takes the <code class="highlighter-rouge">bee</code> object from the <code class="highlighter-rouge">garden</code> bucket, and creates a copy in the <code class="highlighter-rouge">apiary</code> bucket with the new key <code class="highlighter-rouge">wild-bee</code>.</p>
+<p>The following headers are available for objects being copied into buckets that have Server Side Encryption with Customer-Provided Keys (SSE-C). Any <code class="highlighter-rouge">PUT</code> request using SSE-C headers must be sent using SSL. Note that <code class="highlighter-rouge">ETag</code> values in response headers are <em>not</em> the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.</p>
 
-<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">PUT</span> <span class="nn">/apiary/wild-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<p>The specific SSE-C headers used to initially upload objects are required if the copy operation will encrypt the copy of the data at the target destination. If the original/source object was encrypted using SSE-C, the spefic headers used for copying objects will need to be present to decrypt the object source. Copies of objects do not need to be encrypted with the same key.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Header</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-copy-source-server-side-encryption-customer-algorithm</code></td>
+      <td>string</td>
+      <td>This header is used to specify the algorithm and key size to use with the encryption key stored in <code class="highlighter-rouge">x-amz-copy-source-server-side-encryption-customer-key</code> header. This value must be set to the string <code class="highlighter-rouge">AES256</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-copy-source-server-side-encryption-customer-key</code></td>
+      <td>string</td>
+      <td>This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-copy-source-server-side-encryption-customer-key-MD5</code></td>
+      <td>string</td>
+      <td>This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the <code class="highlighter-rouge">x-amz-copy-source-server-side-encryption-customer-key</code> has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h6 id="sample-request-19">Sample request</h6>
+
+<p>This basic example takes the <code class="highlighter-rouge">bee</code> object from the <code class="highlighter-rouge">garden</code> bucket, and creates a copy in the <code class="highlighter-rouge">example</code> bucket with the new key <code class="highlighter-rouge">wild-bee</code>.</p>
+
+<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">PUT</span> <span class="nn">/example-bucket/wild-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
 <span class="na">x-amz-date</span><span class="p">:</span> <span class="s">20161130T195251Z</span>
 <span class="na">x-amz-copy-source</span><span class="p">:</span> <span class="s">/garden/bee</span>
@@ -2276,7 +2558,7 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 </code></pre>
 </div>
 
-<h5 id="sample-response-17">Sample response</h5>
+<h6 id="sample-response-18">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Wed, 30 Nov 2016 19:52:52 GMT</span>
@@ -2302,25 +2584,25 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 
 <h4 id="retrieve-an-objects-acl">Retrieve an object’s ACL</h4>
 
-<p>A <code class="highlighter-rouge">GET</code> given a path to an object given the parameter <code class="highlighter-rouge">?acl=</code> retrieves the access control list for the object.</p>
+<p>A <code class="highlighter-rouge">GET</code> given a path to an object given the parameter <code class="highlighter-rouge">?acl=</code> retrieves the access control list for the object. This operation does not make use of operation specific headers, additional query parameters  or payload elements.</p>
 
-<h5 id="syntax-20">Syntax</h5>
+<h6 id="syntax-20">Syntax</h6>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>GET https://<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>bucket-name<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span>?acl<span class="o">=</span> <span class="c"># path style</span>
 GET https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span>?acl<span class="o">=</span> <span class="c"># virtual host style</span>
 </code></pre>
 </div>
 
-<h5 id="sample-request-20">Sample request</h5>
+<h6 id="sample-request-20">Sample request</h6>
 
-<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">GET</span> <span class="nn">/apiary/queen-bee?acl=</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">GET</span> <span class="nn">/example-bucket/queen-bee?acl=</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
 <span class="na">x-amz-date</span><span class="p">:</span> <span class="s">20161207T155945Z</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">s3-api.us-geo.objectstorage.softlayer.net</span>
 </code></pre>
 </div>
 
-<h5 id="sample-response-18">Sample response</h5>
+<h6 id="sample-response-19">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Wed, 07 Dec 2016 15:59:46 GMT</span>
@@ -2360,20 +2642,86 @@ GET https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 
 <div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> Credentials are generated for each storage account, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a given user, only to a storage account. However, <code class="highlighter-rouge">public-read-write</code> allows any other CRS storage account to access the resource, as well as the general public. </div>
 
-<p>ACLs can use pre-made permissions sets (or ‘canned ACLs’) or be customized in the body of the request. Pre-made ACLs are specified using the <code class="highlighter-rouge">x-amz-acl</code> header with <code class="highlighter-rouge">private</code>, <code class="highlighter-rouge">public-read</code>, or <code class="highlighter-rouge">public-read-write</code> as the value. Custom ACLs are specified using XML in the request body and can grant <code class="highlighter-rouge">READ</code>, <code class="highlighter-rouge">READ_ACP</code> (read ACL), <code class="highlighter-rouge">WRITE_ACP</code> (write ACL), or <code class="highlighter-rouge">FULL_CONTROL</code> permissions to a given storage account.</p>
+<p>The assigned permissions behave as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Permission</th>
+      <th>When granted on a bucket</th>
+      <th>When granted on an object</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>READ</td>
+      <td>Allows grantee to list and read all objects in bucket</td>
+      <td>Allows grantee to read object data and metadata</td>
+    </tr>
+    <tr>
+      <td>WRITE</td>
+      <td>Allows grantee to create, overwrite and delete any object in bucket. Cannot be granted independently from READ permission.</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>READ_ACP</td>
+      <td>This permission does not exist for buckets; default setting is FULL_CONTROL</td>
+      <td>Allows grantee to read object ACL</td>
+    </tr>
+    <tr>
+      <td>WRITE_ACP</td>
+      <td>Default setting is FULL_CONTROL</td>
+      <td>Allows grantee to write ACL for applicable object</td>
+    </tr>
+    <tr>
+      <td>FULL_CONTROL</td>
+      <td>Allows grantee READ, WRITE, READ_ACP and WRITE_ACP permissions on bucket</td>
+      <td>Allows grantee READ, READ_ACP and WRITE_ACP permissions on object</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following canned ACLs are supported by IBM COS.  Values not listed below are not supported.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Canned ACL</th>
+      <th>Applies to</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>private</td>
+      <td>Bucket and object</td>
+      <td>When set on a bucket, the requestor is interpreted as the bucket owner.</td>
+    </tr>
+    <tr>
+      <td>public-read</td>
+      <td>Bucket and object</td>
+      <td>When set on a bucket, the requestor is interpreted as the bucket owner.</td>
+    </tr>
+    <tr>
+      <td>public-read-write</td>
+      <td>Bucket and object</td>
+      <td>When set on a bucket, the requestor is interpreted as the bucket owner.</td>
+    </tr>
+  </tbody>
+</table>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> It is not possible to grant granular <code class="highlighter-rouge">WRITE</code> access at the object level, only at the bucket level.</div>
 
-<h5 id="syntax-21">Syntax</h5>
+<h6 id="syntax-21">Syntax</h6>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>PUT https://<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>bucket-name<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span>?acl<span class="o">=</span> <span class="c"># path style</span>
 PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span>?acl<span class="o">=</span> <span class="c"># virtual host style</span>
 </code></pre>
 </div>
 
-<h5 id="sample-request-canned-acl">Sample request (canned ACL)</h5>
+<h6 id="sample-request-canned-acl">Sample request (canned ACL)</h6>
 
-<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">PUT</span> <span class="nn">/apiary/queen-bee?acl=</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">PUT</span> <span class="nn">/example-bucket/queen-bee?acl=</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
 <span class="na">x-amz-date</span><span class="p">:</span> <span class="s">20161207T162842Z</span>
 <span class="na">x-amz-acl</span><span class="p">:</span> <span class="s">public-read</span>
@@ -2381,7 +2729,7 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 </code></pre>
 </div>
 
-<h5 id="sample-response-19">Sample response</h5>
+<h6 id="sample-response-20">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Wed, 07 Dec 2016 16:28:42 GMT</span>
@@ -2394,11 +2742,11 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 </code></pre>
 </div>
 
-<h5 id="sample-request-canned-acl-in-header">Sample request (canned ACL in header)</h5>
+<h6 id="sample-request-canned-acl-in-header">Sample request (canned ACL in header)</h6>
 
 <p>It is also possible to assign a canned ACL directly when uploading an object by passing the <code class="highlighter-rouge">x-amz-acl</code> header and a canned ACL value.  This example makes the <code class="highlighter-rouge">queen-bee</code> object publicly and anonymously accessible.</p>
 
-<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">PUT</span> <span class="nn">/apiary/queen-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">PUT</span> <span class="nn">/example-bucket/queen-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
 <span class="na">x-amz-date</span><span class="p">:</span> <span class="s">20161207T162842Z</span>
 <span class="na">x-amz-acl</span><span class="p">:</span> <span class="s">public-read</span>
@@ -2406,7 +2754,7 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 </code></pre>
 </div>
 
-<h5 id="sample-response-20">Sample response</h5>
+<h6 id="sample-response-21">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Wed, 07 Dec 2016 16:28:42 GMT</span>
@@ -2419,11 +2767,11 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 </code></pre>
 </div>
 
-<h5 id="sample-request-custom-acl-1">Sample request (custom ACL)</h5>
+<h6 id="sample-request-custom-acl-1">Sample request (custom ACL)</h6>
 
 <p>This is an example of specifying a custom ACL to allow for another account to view the ACL for the “queen-bee” object, but not to access object itself. Additionally, a third account is given full access to the same object as another element of the same ACL.</p>
 
-<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">PUT</span> <span class="nn">/apiary/queen-bee?acl=</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">PUT</span> <span class="nn">/example-bucket/queen-bee?acl=</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
 <span class="na">x-amz-date</span><span class="p">:</span> <span class="s">20161207T163315Z</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">text/plain</span>
@@ -2458,7 +2806,7 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 </code></pre>
 </div>
 
-<h5 id="sample-response-21">Sample response</h5>
+<h6 id="sample-response-22">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Wed, 07 Dec 2016 17:11:51 GMT</span>
@@ -2477,16 +2825,16 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 
 <p>An <code class="highlighter-rouge">OPTIONS</code> given a path to an object along with an origin and request type checks to see if that object is accessible from that origin using that request type.  Unlike all other requests, an OPTIONS request does not require the <code class="highlighter-rouge">authorization</code> or <code class="highlighter-rouge">x-amx-date</code> headers.</p>
 
-<h5 id="syntax-22">Syntax</h5>
+<h6 id="syntax-22">Syntax</h6>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>OPTIONS https://<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>bucket-name<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span> <span class="c"># path style</span>
 OPTIONS https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span> <span class="c"># virtual host style</span>
 </code></pre>
 </div>
 
-<h5 id="sample-request-21">Sample request</h5>
+<h6 id="sample-request-21">Sample request</h6>
 
-<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">OPTIONS</span> <span class="nn">/apiary/queen-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">OPTIONS</span> <span class="nn">/example-bucket/queen-bee</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Access-Control-Request-Method</span><span class="p">:</span> <span class="s">PUT</span>
 <span class="na">Origin</span><span class="p">:</span> <span class="s">http://ibm.com</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">s3-api.us-geo.objectstorage.softlayer.net</span>
@@ -2494,7 +2842,7 @@ OPTIONS https://<span class="o">{</span>bucket-name<span class="o">}</span>.<spa
 </code></pre>
 </div>
 
-<h5 id="sample-response-22">Sample response</h5>
+<h6 id="sample-response-23">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Wed, 07 Dec 2016 16:23:14 GMT</span>
@@ -2514,17 +2862,15 @@ OPTIONS https://<span class="o">{</span>bucket-name<span class="o">}</span>.<spa
 
 <hr />
 
-<h3 id="uploading-objects-in-multiple-parts">Uploading objects in multiple parts</h3>
+<h4 id="uploading-objects-in-multiple-parts">Uploading objects in multiple parts</h4>
 
 <p>When working with larger objects, multipart upload operations are recommended to write objects into IBM COS. An upload of a single object can be performed as a set of parts and these parts can be uploaded independently in any order and in parallel. Upon upload completion, IBM COS then presents all parts as a single object. This provides many benefits: network interruptions do not cause large uploads to fail, uploads can be paused and restarted over time, and objects can be uploaded as they are being created.</p>
 
-<p>Multipart uploads are only available for objects larger than 5MB. For objects smaller than 50GB, a part size of 20MB to 100MB is recommended for optimum performance. For larger objects, part size can be increased without significant performance impact.  Multipart uploads are limited to no more than 10,000 parts of 5GB each.</p>
-
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> Using more than 500 parts leads to inefficiencies in IBM COS and should be avoided when possible.</div>
+<p>Multipart uploads are only available for objects larger than 5MB. For objects smaller than 50GB, 500 parts sized 20MB to 100MB is recommended for optimum performance. For larger objects, part size can be increased without significant performance impact.  Multipart uploads are limited to no more than 10,000 parts of 5GB each and a maximum object size of 5TB.</p>
 
 <p>Due to the additional complexity involved, it is recommended that developers make use of S3 API libraries that provide multipart upload support.</p>
 
-<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> Incomplete multipart uploads do persist until the object is deleted or the multipart upload is aborted with <code class="highlighter-rouge">AbortIncompleteMultipartUpload</code>. If an incomplete multipart upload is not aborted, the partial upload continues to use resources.  Interfaces should be designed with this point in mind, and clean up incomplete multipart uploads.  </div>
+<p>Incomplete multipart uploads do persist until the object is deleted or the multipart upload is aborted with <code class="highlighter-rouge">AbortIncompleteMultipartUpload</code>. If an incomplete multipart upload is not aborted, the partial upload continues to use resources.  Interfaces should be designed with this point in mind, and clean up incomplete multipart uploads.</p>
 
 <p>There are three phases to uploading an object in multiple parts:</p>
 
@@ -2538,14 +2884,45 @@ OPTIONS https://<span class="o">{</span>bucket-name<span class="o">}</span>.<spa
 
 <p>A <code class="highlighter-rouge">POST</code> issued to an object with the query parameter <code class="highlighter-rouge">upload</code> creates a new <code class="highlighter-rouge">UploadId</code> value, which is then be referenced by each part of the object being uploaded.</p>
 
-<h5 id="syntax-23">Syntax</h5>
+<h6 id="syntax-23">Syntax</h6>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>POST https://<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>bucket-name<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span>?uploads<span class="o">=</span> <span class="c"># path style</span>
 POST https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span>?uploads<span class="o">=</span> <span class="c"># virtual host style</span>
 </code></pre>
 </div>
 
-<h5 id="sample-request-22">Sample request</h5>
+<h4 id="specific-headers-for-sse-c-4">Specific headers for SSE-C</h4>
+
+<p>The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that <code class="highlighter-rouge">ETag</code> values in response headers are <em>not</em> the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. <em>These headers must be identical to those provided for each part of the multipart upload.</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Header</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-algorithm</code></td>
+      <td>string</td>
+      <td>This header is used to specify the algorithm and key size to use with the encryption key stored in <code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code> header. This value must be set to the string <code class="highlighter-rouge">AES256</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code></td>
+      <td>string</td>
+      <td>This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-key-MD5</code></td>
+      <td>string</td>
+      <td>This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the <code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code> has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h6 id="sample-request-22">Sample request</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">POST</span> <span class="nn">/some-bucket/multipart-object-123?uploads=</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
@@ -2554,7 +2931,7 @@ POST https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span c
 </code></pre>
 </div>
 
-<h5 id="sample-response-23">Sample response</h5>
+<h6 id="sample-response-24">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Fri, 03 Mar 2017 20:34:12 GMT</span>
@@ -2581,14 +2958,45 @@ POST https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span c
 
 <p>A <code class="highlighter-rouge">PUT</code> request issued to an object with query parameters <code class="highlighter-rouge">partNumber</code> and <code class="highlighter-rouge">uploadId</code> will upload one part of an object.  The parts may be uploaded serially or in parallel, but must be numbered in order.</p>
 
-<h5 id="syntax-24">Syntax</h5>
+<h6 id="syntax-24">Syntax</h6>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>PUT https://<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>bucket-name<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span>?partNumber<span class="o">={</span>sequential-integer<span class="o">}</span>&amp;uploadId<span class="o">={</span>uploadId<span class="o">}=</span> <span class="c"># path style</span>
 PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span>?partNumber<span class="o">={</span>sequential-integer<span class="o">}</span>&amp;uploadId<span class="o">={</span>uploadId<span class="o">}=</span> <span class="c"># virtual host style</span>
 </code></pre>
 </div>
 
-<h5 id="sample-request-23">Sample request</h5>
+<h4 id="specific-headers-for-sse-c-5">Specific headers for SSE-C</h4>
+
+<p>The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that <code class="highlighter-rouge">ETag</code> values in response headers are <em>not</em> the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. <em>These headers must be identical to those provided when the multipart operation was initiated.</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Header</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-algorithm</code></td>
+      <td>string</td>
+      <td>This header is used to specify the algorithm and key size to use with the encryption key stored in <code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code> header. This value must be set to the string <code class="highlighter-rouge">AES256</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code></td>
+      <td>string</td>
+      <td>This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">x-amz-server-side-encryption-customer-key-MD5</code></td>
+      <td>string</td>
+      <td>This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the <code class="highlighter-rouge">x-amz-server-side-encryption-customer-key</code> has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h6 id="sample-request-23">Sample request</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">PUT</span> <span class="nn">/some-bucket/multipart-object-123?partNumber=1&amp;uploadId=0000015a-df89-51d0-2790-dee1ac994053</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
@@ -2599,7 +3007,7 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 </code></pre>
 </div>
 
-<h5 id="sample-response-24">Sample response</h5>
+<h6 id="sample-response-25">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Sat, 18 Mar 2017 03:56:41 GMT</span>
@@ -2618,7 +3026,7 @@ PUT https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span cl
 
 <p>A <code class="highlighter-rouge">POST</code> request issued to an object with query parameter <code class="highlighter-rouge">uploadId</code> and the appropriate XML block in the body will complete a multipart upload.</p>
 
-<h5 id="syntax-25">Syntax</h5>
+<h6 id="syntax-25">Syntax</h6>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>POST https://<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>bucket-name<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span>?uploadId<span class="o">={</span>uploadId<span class="o">}=</span> <span class="c"># path style</span>
 POST https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span>?uploadId<span class="o">={</span>uploadId<span class="o">}=</span> <span class="c"># virtual host style</span>
@@ -2634,7 +3042,7 @@ POST https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span c
 </code></pre>
 </div>
 
-<h5 id="sample-request-24">Sample request</h5>
+<h6 id="sample-request-24">Sample request</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">POST</span> <span class="nn">/some-bucket/multipart-object-123?uploadId=0000015a-df89-51d0-2790-dee1ac994053</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
@@ -2658,7 +3066,7 @@ POST https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span c
 </code></pre>
 </div>
 
-<h5 id="sample-response-25">Sample response</h5>
+<h6 id="sample-response-26">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Fri, 03 Mar 2017 19:18:44 GMT</span>
@@ -2673,7 +3081,7 @@ POST https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span c
 </div>
 
 <div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;CompleteMultipartUploadResult</span> <span class="na">xmlns=</span><span class="s">"http://s3.amazonaws.com/doc/2006-03-01/"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;Location&gt;</span>http://s3-api.us-geo.objectstorage.softlayer.net/zopse/multipart-object-123<span class="nt">&lt;/Location&gt;</span>
+  <span class="nt">&lt;Location&gt;</span>http://s3-api.us-geo.objectstorage.softlayer.net/example-bucket/multipart-object-123<span class="nt">&lt;/Location&gt;</span>
   <span class="nt">&lt;Bucket&gt;</span>some-bucket<span class="nt">&lt;/Bucket&gt;</span>
   <span class="nt">&lt;Key&gt;</span>multipart-object-123<span class="nt">&lt;/Key&gt;</span>
   <span class="nt">&lt;ETag&gt;</span>"765ba3df36cf24e49f67fc6f689dfc6e-2"<span class="nt">&lt;/ETag&gt;</span>
@@ -2687,14 +3095,14 @@ POST https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span c
 
 <p>A <code class="highlighter-rouge">DELETE</code> request issued to an object with query parameter <code class="highlighter-rouge">uploadId</code> will delete all unfinished parts of a multipart upload.</p>
 
-<h5 id="syntax-26">Syntax</h5>
+<h6 id="syntax-26">Syntax</h6>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>DELETE https://<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>bucket-name<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span>?uploadId<span class="o">={</span>uploadId<span class="o">}=</span> <span class="c"># path style</span>
 DELETE https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span class="o">{</span>endpoint<span class="o">}</span>/<span class="o">{</span>object-name<span class="o">}</span>?uploadId<span class="o">={</span>uploadId<span class="o">}=</span> <span class="c"># virtual host style</span>
 </code></pre>
 </div>
 
-<h5 id="sample-request-25">Sample request</h5>
+<h6 id="sample-request-25">Sample request</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="nf">DELETE</span> <span class="nn">/some-bucket/multipart-object-123?uploadId=0000015a-df89-51d0-2790-dee1ac994053</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">{authorization-string}</span>
@@ -2703,7 +3111,7 @@ DELETE https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span
 </code></pre>
 </div>
 
-<h5 id="sample-response-26">Sample response</h5>
+<h6 id="sample-response-27">Sample response</h6>
 
 <div class="language-http highlighter-rouge"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">204</span> <span class="ne">No Content</span>
 <span class="na">Date</span><span class="p">:</span> <span class="s">Thu, 16 Mar 2017 22:07:48 GMT</span>
@@ -2729,7 +3137,7 @@ DELETE https://<span class="o">{</span>bucket-name<span class="o">}</span>.<span
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 IBM. <a href="/crs-docs/notices.html">Notices.</a> All rights reserved. <br />
-<span>Page last updated:</span> November 18, 2016<br/> Site last generated: Aug 18, 2017 <br /><br />
+<span>Page last updated:</span> November 18, 2016<br/> Site last generated: Aug 22, 2017 <br /><br />
 <p> &nbsp; <img src="images/cos_logo.svg" alt="Company logo" style="width:100px;"/></p>
                 </div>
             </div>
