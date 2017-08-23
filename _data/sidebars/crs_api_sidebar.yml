@@ -32,6 +32,13 @@ entries:
       url: /api-reference
       output: web, pdf 
 
+    - title: Common headers
+      url: /api-reference#common-headers
+      output: web, pdf 
+    
+    - title: Error codes
+      url: /api-reference#error-codes
+      output: web, pdf 
   - title: Account operations
     output: web, pdf
     folderitems:
