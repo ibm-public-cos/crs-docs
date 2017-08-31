@@ -1,9 +1,9 @@
 ---
 title: Supported API operations
-keywords: 
+keywords:
 last_updated: November 18, 2016
-tags: 
-summary: 
+tags:
+summary:
 sidebar: crs_sidebar
 permalink: about-compatibility-api
 redirect_from:
@@ -64,7 +64,7 @@ These operations create, destroy, get information about, and control behavior of
 | `OPTIONS` Object | Checks CORS configuration to see if a specific request can be sent.
 | `POST` Object | Adds an object to a bucket using HTML forms.
 | `PUT` Object | Adds an object to a bucket.
-| `PUT` Object ACL | Creates an access control list for an object. 
+| `PUT` Object ACL | Creates an access control list for an object.
 | `PUT` Object (Copy) | Creates a copy of an object. |
 | Initiate Multipart Upload | Creates an upload ID for a given set of parts to be uploaded.
 | Upload Part | Uploads a part of an object associated with an upload ID.
@@ -75,4 +75,3 @@ These operations create, destroy, get information about, and control behavior of
 {:.opstable}
 
 {% include note.html content="Some additional operations, such as tagging and versioning, are supported in private cloud implementations of IBM COS, but not in the public cloud at this time. More information custom object storage solutions can be found at [ibm.com](https://www.ibm.com/cloud-computing/products/storage/object-storage/cloud/)." %}
-
