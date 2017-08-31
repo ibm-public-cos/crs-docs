@@ -93,6 +93,26 @@ Types of endpoint:
 </table>
 {:.endpointtable}
 
+<table>
+  <thead>
+    <tr>
+      <th>Region</th>
+      <th>Type</th>
+      <th>Endpoint</th>
+    </tr>
+  </thead>
+    <tr>
+    <td rowspan="2">US East</td>
+    <td>public</td>
+    <td><code class="highlighter-rouge">s3.us-east.objectstorage.softlayer.net</code></td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td><code class="highlighter-rouge">s3.us-east.objectstorage.service.networklayer.com</code></td>
+  </tr>
+</table>
+{:.endpointtable}
+
 
 ### EU Cross Region Endpoints
 
