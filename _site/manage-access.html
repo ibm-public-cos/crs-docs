@@ -546,7 +546,7 @@ $('#toc').on('click', 'a', function() {
 <span class="n">host</span> <span class="o">=</span> <span class="s">'s3-api.us-geo.objectstorage.softlayer.net'</span>
 <span class="n">region</span> <span class="o">=</span> <span class="s">'us-standard'</span>
 <span class="n">endpoint</span> <span class="o">=</span> <span class="s">'http://s3-api.us-geo.objectstorage.softlayer.net'</span>
-<span class="n">bucket</span> <span class="o">=</span> <span class="s">''</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="s">''</span> <span class="c"># add a '/' before the bucket name to list buckets</span>
 <span class="n">object_key</span> <span class="o">=</span> <span class="s">''</span>
 <span class="n">request_parameters</span> <span class="o">=</span> <span class="s">''</span>
 
@@ -611,7 +611,7 @@ $('#toc').on('click', 'a', function() {
 <span class="c"># create and send the request</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-amz-date'</span><span class="p">:</span> <span class="n">timestamp</span><span class="p">,</span> <span class="s">'Authorization'</span><span class="p">:</span> <span class="n">v4auth_header</span><span class="p">}</span>
 <span class="c"># the 'requests' package autmatically adds the required 'host' header</span>
-<span class="n">request_url</span> <span class="o">=</span> <span class="n">endpoint</span> <span class="o">+</span> <span class="s">"/"</span> <span class="o">+</span> <span class="n">standardized_resource</span> <span class="o">+</span> <span class="n">standardized_querystring</span>
+<span class="n">request_url</span> <span class="o">=</span> <span class="n">endpoint</span> <span class="o">+</span> <span class="n">standardized_resource</span> <span class="o">+</span> <span class="n">standardized_querystring</span>
 
 <span class="k">print</span> <span class="s">'</span><span class="se">\n</span><span class="s">Sending `</span><span class="si">%</span><span class="s">s` request to IBM COS -----------------------'</span> <span class="o">%</span> <span class="n">http_method</span>
 <span class="k">print</span> <span class="s">'Request URL = '</span> <span class="o">+</span> <span class="n">request_url</span>

@@ -90,7 +90,7 @@ http_method = 'GET'
 host = 's3-api.us-geo.objectstorage.softlayer.net'
 region = 'us-standard'
 endpoint = 'http://s3-api.us-geo.objectstorage.softlayer.net'
-bucket = ''
+bucket = '' # add a '/' before the bucket name to list buckets
 object_key = ''
 request_parameters = ''
 
@@ -155,7 +155,7 @@ v4auth_header = (hashing_algorithm + ' ' +
 # create and send the request
 headers = {'x-amz-date': timestamp, 'Authorization': v4auth_header}
 # the 'requests' package autmatically adds the required 'host' header
-request_url = endpoint + "/" + standardized_resource + standardized_querystring
+request_url = endpoint + standardized_resource + standardized_querystring
 
 print '\nSending `%s` request to IBM COS -----------------------' % http_method
 print 'Request URL = ' + request_url
