@@ -20,7 +20,6 @@ The easiest way to consume the AWS Java SDK is to use Maven to manage dependenci
 
 Maven uses a file called `pom.xml` to specify the libraries (and their versions) needed for a Java project.  Here is an example `pom.xml` file for using the AWS S3 Java SDK to connect to IBM COS (it also includes the SoftLayer library for provisioning credentials and new accounts).
 
-{% include important.html content="Please note that recent versions of the AWS SDK for Java may have introduced incompatibilities.  The most recent recommended version is **1.11.5**" %}
 
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
