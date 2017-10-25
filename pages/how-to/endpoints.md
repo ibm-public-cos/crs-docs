@@ -1,7 +1,7 @@
 ---
 title: Selecting endpoints
 keywords: 
-last_updated: November 18, 2016
+last_updated: October 25, 2017
 tags: 
 summary: 
 sidebar: crs_sidebar
@@ -158,7 +158,7 @@ Types of endpoint:
   </tr>
   <tr>
     <td>private</td>
-    <td><code class="highlighter-rouge">s3pi.mil-eu-geo.objectstorage.service.networklayer.com</code></td>
+    <td><code class="highlighter-rouge">s3.mil-eu-geo.objectstorage.service.networklayer.com</code></td>
   </tr>
 </table>
 {:.endpointtable}
