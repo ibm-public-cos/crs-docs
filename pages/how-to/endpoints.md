@@ -1,9 +1,16 @@
 ---
 title: Selecting endpoints
+<<<<<<< HEAD
 keywords:
 last_updated: November 18, 2016
 tags:
 summary:
+=======
+keywords: 
+last_updated: October 25, 2017
+tags: 
+summary: 
+>>>>>>> 53f565b27fb01c421b517494a5f45100d4c236e0
 sidebar: crs_sidebar
 permalink: endpoints
 redirect_from:
@@ -161,7 +168,7 @@ Types of endpoint:
   </tr>
   <tr>
     <td>private</td>
-    <td><code class="highlighter-rouge">s3pi.mil-eu-geo.objectstorage.service.networklayer.com</code></td>
+    <td><code class="highlighter-rouge">s3.mil-eu-geo.objectstorage.service.networklayer.com</code></td>
   </tr>
 </table>
 {:.endpointtable}
