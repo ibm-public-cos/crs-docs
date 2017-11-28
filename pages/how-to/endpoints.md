@@ -9,7 +9,6 @@ permalink: endpoints
 redirect_from:
   - /crs-endpoints
   - /crs-endpoints.html
-  - /endpoints.html
 folder: how-to
 ---
 
