@@ -192,12 +192,6 @@
   
   
   <url>
-    <loc>/using-the-api</loc>
-  </url>
-  
-  
-  
-  <url>
     <loc>/gallery-tutorial</loc>
   </url>
   
@@ -427,42 +421,6 @@
   
   <url>
     <loc>/crs-sldn.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>/crs-about-api</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>/crs-about-api.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>/crs-control-endpoints</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>/crs-control-endpoints.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>/crs-connecting</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>/crs-connecting.html</loc>
   </url>
   
   

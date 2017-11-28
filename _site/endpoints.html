@@ -464,7 +464,9 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <p>Both regional and cross region endpoints are available for connecting applications or clients that use the S3 API to the public cloud. Endpoints should be chosen based on proximity to the application servers accessing the object store to minimize latency.  For workloads not concentrated in a single geographic area, the Cross Region endpoint routes connections to the nearest regional data centers.  When using a cross region endpoint, it is possible to direct traffic to a specific data center, although the data will still be distributed across all three sites.  Endpoints can be accessed over either plaintext or SSL depending on security requirements.</p>
+  <p>Both regional and cross region endpoints are available for connecting applications to IBM Cloud Object Storage. Compute workloads co-located with a Regional COS endpoint will see lower latency and better performance. For workloads not concentrated in a single geographic area, the <code class="highlighter-rouge">geo</code> endpoint routes connections to the nearest regional data centers.</p>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> When using a cross region endpoint, it is possible to direct inbound traffic to a specific access point while still distributing data across all three regions. While this can improve performance for workloads running in the same region as the targeted access point, there is no automated failover if that region becomes unavailable.  Applications that direct traffic to an access point instead of the <code class="highlighter-rouge">geo</code> endpoint <strong>must</strong> implement appropriate failover logic internally to achieve the availabity advantages of the cross-region storage.</div>
 
 <p>Types of endpoint:</p>
 
@@ -626,7 +628,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 IBM. <a href="/crs-docs/notices.html">Notices.</a> All rights reserved. <br />
-<span>Page last updated:</span> November 18, 2016<br/> Site last generated: Sep 7, 2017 <br /><br />
+<span>Page last updated:</span> November 18, 2016<br/> Site last generated: Nov 28, 2017 <br /><br />
 <p> &nbsp; <img src="images/cos_logo.svg" alt="Company logo" style="width:100px;"/></p>
                 </div>
             </div>
