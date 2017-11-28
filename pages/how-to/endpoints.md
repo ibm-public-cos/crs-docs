@@ -14,7 +14,7 @@ folder: how-to
 
 Both regional and cross region endpoints are available for connecting applications to IBM Cloud Object Storage. Compute workloads co-located with a Regional COS endpoint will see lower latency and better performance. For workloads not concentrated in a single geographic area, the `geo` endpoint routes connections to the nearest regional data centers.
 
-{% include tip.html content="When using a cross region endpoint, it is possible to direct inbound traffic to a specific access point while still distributing data across all three regions. While this may improve performance for some workloads running in the same region as the targeted access point, there is no automated failover if that region becomes unavailable.  Applications that direct traffic to an access point instead of the `geo` endpoint **must** implement appropriate failover logic internally to achieve the availabity advantages of cross-region storage." %}
+{% include important.html content="When using a cross region endpoint, it is possible to direct inbound traffic to a specific access point while still distributing data across all three regions. While this may improve performance for some workloads running in the same region as the targeted access point, there is no automated failover if that region becomes unavailable.  Applications that direct traffic to an access point instead of the `geo` endpoint **must** implement appropriate failover logic internally to achieve the availabity advantages of cross-region storage." %}
 
 
 Types of endpoint:
