@@ -42,7 +42,7 @@ Types of endpoint:
     <td><code class="highlighter-rouge">s3-api.us-geo.objectstorage.service.networklayer.com</code></td>
   </tr>
   <tr>
-    <td rowspan="2">Dallas</td>
+    <td rowspan="2">Dallas Access Point</td>
     <td>public</td>
     <td><code class="highlighter-rouge">s3-api.dal-us-geo.objectstorage.softlayer.net</code></td>
   </tr>
@@ -51,7 +51,7 @@ Types of endpoint:
     <td><code class="highlighter-rouge">s3-api.dal-us-geo.objectstorage.service.networklayer.com</code></td>
   </tr>
   <tr>
-    <td rowspan="2">San Jose</td>
+    <td rowspan="2">San Jose Access Point</td>
         <td>public</td>
     <td><code class="highlighter-rouge">s3-api.sjc-us-geo.objectstorage.softlayer.net</code></td>
   </tr>
@@ -60,7 +60,7 @@ Types of endpoint:
     <td><code class="highlighter-rouge">s3-api.sjc-us-geo.objectstorage.service.networklayer.com</code></td>
   </tr>
   <tr>
-    <td rowspan="2">Washington, DC</td>
+    <td rowspan="2">Washington, DC Access Point</td>
     <td>public</td>
     <td><code class="highlighter-rouge">s3-api.wdc-us-geo.objectstorage.softlayer.net</code></td>
   </tr>
@@ -72,7 +72,7 @@ Types of endpoint:
 {:.endpointtable}
 
 
-### US Regional Endpoints
+## US Regional Endpoints
 
 <table>
   <thead>
@@ -91,31 +91,20 @@ Types of endpoint:
     <td>private</td>
     <td><code class="highlighter-rouge">s3.us-south.objectstorage.service.networklayer.com</code></td>
   </tr>
-</table>
-{:.endpointtable}
-
-<table>
-  <thead>
-    <tr>
-      <th>Region</th>
-      <th>Type</th>
-      <th>Endpoint</th>
-    </tr>
-  </thead>
-    <tr>
-    <td rowspan="2">US East</td>
-    <td>public</td>
-    <td><code class="highlighter-rouge">s3.us-east.objectstorage.softlayer.net</code></td>
-  </tr>
   <tr>
-    <td>private</td>
-    <td><code class="highlighter-rouge">s3.us-east.objectstorage.service.networklayer.com</code></td>
-  </tr>
+  <td rowspan="2">US East</td>
+  <td>public</td>
+  <td><code class="highlighter-rouge">s3.us-east.objectstorage.softlayer.net</code></td>
+</tr>
+<tr>
+  <td>private</td>
+  <td><code class="highlighter-rouge">s3.us-east.objectstorage.service.networklayer.com</code></td>
+</tr>
 </table>
 {:.endpointtable}
 
 
-### EU Cross Region Endpoints
+## EU Cross Region Endpoints
 
 <table>
   <thead>
@@ -135,7 +124,7 @@ Types of endpoint:
     <td><code class="highlighter-rouge">s3.eu-geo.objectstorage.service.networklayer.com</code></td>
   </tr>
   <tr>
-    <td rowspan="2">Amsterdam</td>
+    <td rowspan="2">Amsterdam Access Point</td>
     <td>public</td>
     <td><code class="highlighter-rouge">s3.ams-eu-geo.objectstorage.softlayer.net</code></td>
   </tr>
@@ -144,7 +133,7 @@ Types of endpoint:
     <td><code class="highlighter-rouge">s3.ams-eu-geo.objectstorage.service.networklayer.com</code></td>
   </tr>
   <tr>
-    <td rowspan="2">Frankfurt</td>
+    <td rowspan="2">Frankfurt Access Point</td>
         <td>public</td>
     <td><code class="highlighter-rouge">s3.fra-eu-geo.objectstorage.softlayer.net</code></td>
   </tr>
@@ -153,7 +142,7 @@ Types of endpoint:
     <td><code class="highlighter-rouge">s3.fra-eu-geo.objectstorage.service.networklayer.com</code></td>
   </tr>
   <tr>
-    <td rowspan="2">Milan</td>
+    <td rowspan="2">Milan Access Point</td>
     <td>public</td>
     <td><code class="highlighter-rouge">s3.mil-eu-geo.objectstorage.softlayer.net</code></td>
   </tr>
@@ -162,4 +151,3 @@ Types of endpoint:
     <td><code class="highlighter-rouge">s3.mil-eu-geo.objectstorage.service.networklayer.com</code></td>
   </tr>
 </table>
-{:.endpointtable}
