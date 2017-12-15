@@ -151,3 +151,26 @@ Types of endpoint:
     <td><code class="highlighter-rouge">s3.mil-eu-geo.objectstorage.service.networklayer.com</code></td>
   </tr>
 </table>
+{:.endpointtable}
+
+## EU Regional Endpoints
+
+<table>
+  <thead>
+    <tr>
+      <th>Region</th>
+      <th>Type</th>
+      <th>Endpoint</th>
+    </tr>
+  </thead>
+    <tr>
+    <td rowspan="2">EU Regional Endpoints</td>
+    <td>public</td>
+    <td><code class="highlighter-rouge">s3.eu-gb.objectstorage.softlayer.net</code></td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td><code class="highlighter-rouge">s3.eu-gb.objectstorage.service.networklayer.com</code></td>
+  </tr>
+</table>
+{:.endpointtable}
