@@ -1,3 +1,14 @@
+---
+title: Using the API
+keywords:
+last_updated: November 18, 2016
+tags:
+summary:
+sidebar: crs_sidebar
+permalink: using-the-api
+folder: getting-started
+toc: True
+---
 
 ## Using the API
 
@@ -19,15 +30,12 @@ The user interface portal provides a high level view of a storage account. It is
 2. Click the credentials header to expand and show the credentials.
 3. An account can have a maximum of two credentials at once. This allows for credentials to be rotated in applications without interruption. A new credential can be created, by clicking the **Add credential** button just below the Credentials header.
 4. A credential can also be deleted, by clicking the **-** button to the right of the credential. A confirmation dialog will pop-up for confirmation before the credential is deleted.
-5. The page also shows the various authentication endpoints that can be used to access the account. 
+5. The page also shows the various authentication endpoints that can be used to access the account.
 
 ### Using libraries and SDKs
 
-IBM Cloud does not provide native libraries or SDKs for interacting with COS offerings at this time, instead stored data is accessed using an implementation of the S3 API. Compatibility with an established object storage API allows developers to make use of a large ecosystem of third-party tools and SDKs.  
+IBM Cloud does not provide native libraries or SDKs for interacting with COS offerings at this time, instead stored data is accessed using an implementation of the S3 API. Compatibility with an established object storage API allows developers to make use of a large ecosystem of third-party tools and SDKs.
 
 A full list of supported S3 API operations can be found in the [API Overview]( {{ site.baseurl }}/about-compatibility-api).
 
-This documentation provides basic introductions to using popular third-party S3 API [client applications]( {{ site.baseurl }}/desktop-clients) and a [command line interface]( {{ site.baseurl }}/cli), as well as a library for the [Python]( {{ site.baseurl }}/crs-python.html) programming language. 
-
- 
-
+This documentation provides basic introductions to using popular third-party S3 API [client applications]( {{ site.baseurl }}/desktop-clients) and a [command line interface]( {{ site.baseurl }}/cli), as well as a library for the [Python]( {{ site.baseurl }}/crs-python.html) programming language.
