@@ -9,6 +9,8 @@ permalink: java
 redirect_from:
   - /crs-java
   - /crs-java.html
+redirect_to:
+  - https://console.bluemix.com/docs/infrastructure/cloud-object-storage-infrastructure/java.html
 folder: api-reference
 toc: true
 ---
