@@ -216,6 +216,12 @@
   
   
   <url>
+    <loc>/about-compatibility-api</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>/crs-api-reference</loc>
   </url>
   
@@ -223,6 +229,12 @@
   
   <url>
     <loc>/crs-api-reference.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>/api-reference</loc>
   </url>
   
   
@@ -240,6 +252,12 @@
   
   
   <url>
+    <loc>/billing</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>/crs-cli</loc>
   </url>
   
@@ -247,6 +265,12 @@
   
   <url>
     <loc>/crs-cli.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>/cli</loc>
   </url>
   
   
@@ -276,6 +300,12 @@
   
   
   <url>
+    <loc>/developer-guidance</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>/crs-endpoints</loc>
   </url>
   
@@ -288,6 +318,12 @@
   
   
   <url>
+    <loc>/getting-started-with-cos</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>/crs-other-offerings</loc>
   </url>
   
@@ -295,6 +331,12 @@
   
   <url>
     <loc>/crs-other-offerings.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>/index.html</loc>
   </url>
   
   
@@ -330,6 +372,18 @@
   
   
   <url>
+    <loc>/manage-access</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>/node</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>/crs-create-account</loc>
   </url>
   
@@ -354,6 +408,12 @@
   
   
   <url>
+    <loc>/ordering-storage</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>/crs-python</loc>
   </url>
   
@@ -361,6 +421,12 @@
   
   <url>
     <loc>/crs-python.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>/python</loc>
   </url>
   
   
@@ -402,6 +468,12 @@
   
   
   <url>
+    <loc>/storing-and-retrieving-objects</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>/crs-support</loc>
   </url>
   
@@ -433,6 +505,12 @@
   
   <url>
     <loc>/crs-sldn.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>/using-the-api</loc>
   </url>
   
   

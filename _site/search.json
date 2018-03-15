@@ -354,6 +354,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "about-compatibility-api",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "crs-api-reference",
 "summary": ""
 }
@@ -366,6 +377,17 @@
 "tags": "",
 "keywords": "",
 "url": "crs-api-reference.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "api-reference",
 "summary": ""
 }
 ,
@@ -398,6 +420,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "billing",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "crs-cli",
 "summary": ""
 }
@@ -410,6 +443,17 @@
 "tags": "",
 "keywords": "",
 "url": "crs-cli.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "cli",
 "summary": ""
 }
 ,
@@ -464,6 +508,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "developer-guidance",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "crs-endpoints",
 "summary": ""
 }
@@ -486,6 +541,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "getting-started-with-cos",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "crs-other-offerings",
 "summary": ""
 }
@@ -498,6 +564,17 @@
 "tags": "",
 "keywords": "",
 "url": "crs-other-offerings.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "index.html",
 "summary": ""
 }
 ,
@@ -563,6 +640,28 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "manage-access",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "node",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "crs-create-account",
 "summary": ""
 }
@@ -607,6 +706,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "ordering-storage",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "crs-python",
 "summary": ""
 }
@@ -619,6 +729,17 @@
 "tags": "",
 "keywords": "",
 "url": "crs-python.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "python",
 "summary": ""
 }
 ,
@@ -695,6 +816,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "storing-and-retrieving-objects",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "crs-support",
 "summary": ""
 }
@@ -751,6 +883,17 @@
 "tags": "",
 "keywords": "",
 "url": "crs-sldn.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "using-the-api",
 "summary": ""
 }
 ,

@@ -9,8 +9,8 @@ permalink: api-reference
 redirect_from:
   - /crs-api-reference
   - /crs-api-reference.html
-  redirect_to:
-    - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastructure/buckets.html
+redirect_to:
+  - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastructure/buckets.html
 folder: api-reference
 toc: false
 ---

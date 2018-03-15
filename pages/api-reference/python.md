@@ -9,8 +9,8 @@ permalink: python
 redirect_from:
   - /crs-python
   - /crs-python.html
-  redirect_to:
-    - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastructure/python.html
+redirect_to:
+  - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastructure/python.html
 folder: api-reference
 ---
 
