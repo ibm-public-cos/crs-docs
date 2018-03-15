@@ -1,14 +1,16 @@
 ---
-title: Billing information 
-keywords: 
+title: Billing information
+keywords:
 last_updated: November 18, 2016
-tags: 
-summary: 
+tags:
+summary:
 sidebar: crs_sidebar
 permalink: billing
 redirect_from:
   - /crs-billing
   - /crs-billing.html
+redirect_to:
+  - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastructure/billing.html
 folder: help
 toc: false
 ---
@@ -40,5 +42,5 @@ There is no charge for deleting buckets or objects from the system.
 | Class B | GET (excluding listing), HEAD, and OPTIONS requests | Retrieving objects and metadata |
 
 ### What is the difference between the Standard, Vault, and Flex billing tiers?
- 
+
 Vault billing is a way to control costs for infrequently accessed data, such as compliance or backup data. These objects incur lower storage costs but higher costs for operational requests. Unlike the Standard billing tier, additional costs are incurred on a per-GB basis for objects retrieved from the system.  Flex billing is intended for use when data access patterns are difficult to predict, and pricing is optimized based on frequency of access.

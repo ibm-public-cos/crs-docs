@@ -1,18 +1,20 @@
 ---
 title: Using Python with IBM COS
-keywords: 
+keywords:
 last_updated: November 18, 2016
-tags: 
-summary: 
+tags:
+summary:
 sidebar: crs_sidebar
 permalink: python
 redirect_from:
   - /crs-python
   - /crs-python.html
+  redirect_to:
+    - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastructure/python.html
 folder: api-reference
 ---
 
-Python support is provided through the Boto 3 library.  It can be installed from the Python Package Index via `pip install boto3`. The examples shown here were generated using version 1.4.0 of the boto3 package.  
+Python support is provided through the Boto 3 library.  It can be installed from the Python Package Index via `pip install boto3`. The examples shown here were generated using version 1.4.0 of the boto3 package.
 
 {% include note.html content="Existing applications that use the original Boto 2.x library should be compatible as well, although it is no longer being actively maintained and users are encouraged to migrate to Boto 3. " %}
 
@@ -24,14 +26,14 @@ aws_access_key_id = {Access Key ID}
 aws_secret_access_key = {Secret Access Key}
 ```
 
-The `boto3` library provides complete access to the S3 API and can source credentials from the `~/.aws/credentials` file referenced above.  The IBM COS endpoint must be specified when creating a service resource or low-level client as shown in the following basic examples. 
+The `boto3` library provides complete access to the S3 API and can source credentials from the `~/.aws/credentials` file referenced above.  The IBM COS endpoint must be specified when creating a service resource or low-level client as shown in the following basic examples.
 
 {% include tip.html content= "Detailed documentation can be found at [boto3.readthedocs.io](https://boto3.readthedocs.io/en/latest/reference/services/s3.html)." %}
 
 
 ### Example service resource script
 
-Creating a service resource provides greater abstraction for higher level tasks.  This is a basic script that fetches the list of buckets owned by an account, and lists the objects in each bucket. 
+Creating a service resource provides greater abstraction for higher level tasks.  This is a basic script that fetches the list of buckets owned by an account, and lists the objects in each bucket.
 
 ```python
 import boto3
@@ -218,4 +220,3 @@ Raw output from 'list_buckets()' in bucket-2:
     },
 }
 ```
-

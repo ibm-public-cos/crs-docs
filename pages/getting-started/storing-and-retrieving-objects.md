@@ -11,6 +11,8 @@ redirect_from:
   - /crs-control-buckets.html
   - /crs-control-objects
   - /crs-control-objects.html
+redirect_to:
+    - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastructure/storing-retrieving.html
 folder: getting-started
 ---
 

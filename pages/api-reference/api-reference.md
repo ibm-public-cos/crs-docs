@@ -9,6 +9,8 @@ permalink: api-reference
 redirect_from:
   - /crs-api-reference
   - /crs-api-reference.html
+  redirect_to:
+    - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastructure/buckets.html
 folder: api-reference
 toc: false
 ---
@@ -171,7 +173,7 @@ Authorization: {authorization-string}
 
 ----
 
-<!-- 
+<!--
 #### View the storage class of buckets belonging to an account
 
 A `GET` issued to the endpoint root with the `pagination` query parameter returns a list of buckets associated with the requesting account along with their storage class (shown as `LocationConstraint`).
@@ -437,7 +439,7 @@ X-Clv-S3-Version: 2.5
 Content-Length: 0
 ```
 
-<!-- 
+<!--
 
 ----
 
@@ -1060,7 +1062,7 @@ The server responds with `204 No Content`.
 
 #### Upload an object
 
-A `PUT` given a path to an object uploads the request body as an object. A SHA256 hash of the object is a required header.  All objects are limited to 5TB in size. This operation does not make use of operation specific query parameters, or payload elements.  
+A `PUT` given a path to an object uploads the request body as an object. A SHA256 hash of the object is a required header.  All objects are limited to 5TB in size. This operation does not make use of operation specific query parameters, or payload elements.
 
 ###### Syntax
 
@@ -1071,11 +1073,11 @@ PUT https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 
 ##### Specific headers for SSE-C
 
-The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. 
+The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
 Header | Type | Description
 --- | ---- | ------------
-`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.  
+`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
 `x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
 `x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
@@ -1175,11 +1177,11 @@ Header | Type | Description
 
 #### Specific headers for SSE-C
 
-The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Anyrequest using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. 
+The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Anyrequest using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
 Header | Type | Description
 --- | ---- | ------------
-`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.  
+`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
 `x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
 `x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
@@ -1234,11 +1236,11 @@ Header | Type | Description
 
 #### Specific headers for SSE-C
 
-The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. 
+The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
 Header | Type | Description
 --- | ---- | ------------
-`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.  
+`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
 `x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
 `x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
@@ -1393,13 +1395,13 @@ Header | Type | Description
 
 #### Specific headers for SSE-C
 
-The following headers are available for objects being copied into buckets that have Server Side Encryption with Customer-Provided Keys (SSE-C). Any `PUT` request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. 
+The following headers are available for objects being copied into buckets that have Server Side Encryption with Customer-Provided Keys (SSE-C). Any `PUT` request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
 The specific SSE-C headers used to initially upload objects are required if the copy operation will encrypt the copy of the data at the target destination. If the original/source object was encrypted using SSE-C, the spefic headers used for copying objects will need to be present to decrypt the object source. Copies of objects do not need to be encrypted with the same key.
 
 Header | Type | Description
 --- | ---- | ------------
-`x-amz-copy-source-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-copy-source-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.  
+`x-amz-copy-source-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-copy-source-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
 `x-amz-copy-source-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
 `x-amz-copy-source-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-copy-source-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
@@ -1704,7 +1706,7 @@ The following headers are available for buckets using Server Side Encryption wit
 
 Header | Type | Description
 --- | ---- | ------------
-`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.  
+`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
 `x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
 `x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
@@ -1758,7 +1760,7 @@ The following headers are available for buckets using Server Side Encryption wit
 
 Header | Type | Description
 --- | ---- | ------------
-`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.  
+`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
 `x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
 `x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 

@@ -9,6 +9,8 @@ permalink: manage-access
 redirect_from:
   - /crs-authentication.html
   - /crs-authentication
+redirect_to:
+  - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastructure/manage-access.html
 folder: how-to
 toc: true
 ---

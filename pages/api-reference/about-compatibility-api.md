@@ -9,6 +9,8 @@ permalink: about-compatibility-api
 redirect_from:
   - /crs-api-operations
   - /crs-api-operations.html
+redirect_to:
+    - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastructure/about-api.html
 folder: api-reference
 ---
 

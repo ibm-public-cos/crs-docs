@@ -1,14 +1,16 @@
 ---
-title: Using the command line to connect to IBM COS  
-keywords: 
+title: Using the command line to connect to IBM COS
+keywords:
 last_updated: November 18, 2016
-tags: 
-summary: 
+tags:
+summary:
 sidebar: crs_sidebar
 permalink: cli
 redirect_from:
   - /crs-cli
   - /crs-cli.html
+redirect_to:
+    - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastructure/cli.html
 folder: api-reference
 toc: true
 ---
@@ -28,11 +30,11 @@ aws_secret_access_key = {Secret Access Key}
 
 The IBM COS endpoint must be sourced using the `--endpoint-url` option, and can not be set in the credentials file.
 
-Simple use cases can be accomplished using `aws --endpoint-url={endpoint} s3 <command>`. Objects are managed using familiar shell commands, such as `ls`, `mv`, `cp`, and `rm`.  Buckets can be deleted using `rb`.  
+Simple use cases can be accomplished using `aws --endpoint-url={endpoint} s3 <command>`. Objects are managed using familiar shell commands, such as `ls`, `mv`, `cp`, and `rm`.  Buckets can be deleted using `rb`.
 
 **Note**: Buckets can not be created using this method. Instead, use the `s3api` method described below.
 
-#### Basic operations 
+#### Basic operations
 Listing buckets:
 
 ```shell
@@ -71,7 +73,7 @@ $ aws --endpoint-url=https://{endpoint} s3 cp s3://bucket-1/new-file s3://bucket
 copy: s3://bucket-1/new-file to s3://bucket-2/new-file
 ```
 
-More complex operations require leveraging the api directly with `aws --endpoint-url={endpoint} s3api <command>`, which provides a standard JSON reponse.  
+More complex operations require leveraging the api directly with `aws --endpoint-url={endpoint} s3api <command>`, which provides a standard JSON reponse.
 
 Listing buckets:
 
@@ -169,4 +171,3 @@ It is also possible to set an expiration time for the URL in seconds (default is
 ```bash
 $ aws --endpoint-url=https://{endpoint} s3 presign s3://bucket-1/new-file --expires-in 600
 ```
-

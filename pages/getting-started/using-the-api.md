@@ -7,6 +7,8 @@ summary:
 sidebar: crs_sidebar
 permalink: using-the-api
 folder: getting-started
+redirect_to:
+  - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastructure/about-api.html
 toc: True
 ---
 
