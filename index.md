@@ -8,7 +8,7 @@ redirect_from:
   - /crs-other-offerings
   - /crs-other-offerings.html
 redirect_to:
-  - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastructure/about-cos.html
+  - https://console.bluemix.net/docs/services/ibm-cos/index.html
 summary:
 toc: false
 ---
