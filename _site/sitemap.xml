@@ -318,6 +318,18 @@
   
   
   <url>
+    <loc>/endpoints</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>/faq</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>/getting-started-with-cos</loc>
   </url>
   
@@ -384,6 +396,12 @@
   
   
   <url>
+    <loc>/object-storage</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>/crs-create-account</loc>
   </url>
   
@@ -444,6 +462,18 @@
   
   
   <url>
+    <loc>/security</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>/storage-classes</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>/crs-control-buckets</loc>
   </url>
   
@@ -498,6 +528,12 @@
   
   
   <url>
+    <loc>/support</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>/crs-sldn</loc>
   </url>
   
@@ -511,6 +547,12 @@
   
   <url>
     <loc>/using-the-api</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>/gallery-tutorial</loc>
   </url>
   
   

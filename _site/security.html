@@ -437,11 +437,36 @@
    
 
     
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
 
 
     
 
-  <h3 id="overview">Overview</h3>
+  <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Warning:</b> “This documenation is deprecated and not currently maintained. View [updated documentation.] ](https://console.bluemix.net/docs/services/ibm-cos/index.html).”</div>
+
+<h3 id="overview">Overview</h3>
 
 <p>IBM Cloud Object Storage uses an innovative approach for cost-effectively storing large volumes of unstructured data while ensuring security, availability and reliability. This is accomplished by using Information Dispersal Algorithms (IDAs) to separate data into unrecognizable “slices” that are distributed across a network of data centers, making transmission and storage of data inherently private and secure. No complete copy of the data resides in any single storage node, and only a subset of nodes needs to be available in order to fully retrieve the data on the network.</p>
 
@@ -474,7 +499,7 @@
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2018 IBM. <a href="/crs-docs/notices.html">Notices.</a> All rights reserved. <br />
-<span>Page last updated:</span> November 18, 2016<br/> Site last generated: Mar 16, 2018 <br /><br />
+<span>Page last updated:</span> November 18, 2016<br/> Site last generated: Mar 27, 2018 <br /><br />
 <p> &nbsp; <img src="images/cos_logo.svg" alt="Company logo" style="width:100px;"/></p>
                 </div>
             </div>

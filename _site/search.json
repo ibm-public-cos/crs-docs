@@ -541,6 +541,28 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "endpoints",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "faq",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "getting-started-with-cos",
 "summary": ""
 }
@@ -662,6 +684,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "object-storage",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "crs-create-account",
 "summary": ""
 }
@@ -772,6 +805,28 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "security",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "storage-classes",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "crs-control-buckets",
 "summary": ""
 }
@@ -871,6 +926,17 @@
 "title": "",
 "tags": "",
 "keywords": "",
+"url": "support",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
 "url": "crs-sldn",
 "summary": ""
 }
@@ -894,6 +960,17 @@
 "tags": "",
 "keywords": "",
 "url": "using-the-api",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "gallery-tutorial",
 "summary": ""
 }
 ,
