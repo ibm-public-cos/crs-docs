@@ -13,7 +13,7 @@ summary:
 toc: false
 ---
 
-{% include custom/promo.html %}
+{% include custom/deprecation.html %}
 
 Information stored with IBM Cloud Object Storage is encrypted and dispersed across multiple geographic locations, and accessed through an implementation of the S3 API. This service makes use of the distributed storage technologies provided by IBM's Cloud Object Storage System (formerly Cleversafe).
 

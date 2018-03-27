@@ -1,9 +1,9 @@
 ---
 title: Getting help
-keywords: 
+keywords:
 last_updated: November 18, 2016
-tags: 
-summary: 
+tags:
+summary:
 sidebar: crs_sidebar
 permalink: support
 redirect_from:
@@ -12,8 +12,12 @@ redirect_from:
   - /crs-support-resources
   - /crs-support-resources.html
 folder: help
+redirect_to:
+  - https://console.bluemix.net/docs/services/ibm-cos/index.html
 ---
- 
+
+{% include custom/deprecation.html %}
+
 
 For help with questions about IBM Cloud Object Storage and it's capabilities, please visit [dW Answers](https://developer.ibm.com/answers/smartspace/cloudobjectstorage/) and tag questions with `objectstorage` and/or `standardcrossregion`.
 

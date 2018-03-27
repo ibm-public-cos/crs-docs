@@ -7,7 +7,11 @@ summary:
 sidebar: crs_sidebar
 permalink: /storage-classes
 folder: how-to
+redirect_to:
+  - https://console.bluemix.net/docs/services/ibm-cos/index.html
 ---
+
+{% include custom/deprecation.html %}
 
 Not all data that is stored needs to be accessed frequently, and some archival data might be rarely accessed if at all.  For less active workloads, buckets can be created in a different storage class and objects stored in these buckets will incur charges on a different schedule than standard storage.
 

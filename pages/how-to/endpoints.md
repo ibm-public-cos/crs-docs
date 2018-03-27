@@ -10,7 +10,11 @@ redirect_from:
   - /crs-endpoints
   - /crs-endpoints.html
 folder: how-to
+redirect_to:
+  - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastinfrastructure/endpoints.html
 ---
+
+{% include custom/deprecation.html %}
 
 Both regional and cross region endpoints are available for connecting applications to IBM Cloud Object Storage. Compute workloads co-located with a Regional COS endpoint will see lower latency and better performance. For workloads not concentrated in a single geographic area, the `geo` endpoint routes connections to the nearest regional data centers.
 

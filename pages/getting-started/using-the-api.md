@@ -12,6 +12,8 @@ redirect_to:
 toc: True
 ---
 
+{% include custom/deprecation.html %}
+
 ## Using the API
 
 Connecting to IBM COS via the API requires specifying two fundamental pieces of information: credentials and an endpoint. Many tools that are compatible with the S3 API default to connecting to AWS endpoints, and so it is necessary to explicitly declare the endpoint when using these tools.

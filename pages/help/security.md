@@ -1,17 +1,20 @@
 ---
 title: Data security and IBM COS
-keywords: 
+keywords:
 last_updated: November 18, 2016
-tags: 
-summary: 
+tags:
+summary:
 sidebar: crs_sidebar
 permalink: security
 redirect_from:
   - /crs-security
   - /crs-security.html
 folder: help
-toc: false
+redirect_to:
+  - https://console.bluemix.net/docs/services/ibm-cos/index.html
 ---
+
+{% include custom/deprecation.html %}
 
 ### Overview
 

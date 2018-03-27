@@ -1,9 +1,9 @@
 ---
 title: Using desktop clients
-keywords: 
+keywords:
 last_updated: November 18, 2016
-tags: 
-summary: 
+tags:
+summary:
 sidebar: crs_sidebar
 permalink: desktop-clients
 redirect_from:
@@ -13,7 +13,10 @@ folder: how-to
 toc: false
 ---
 
-For basic tasks, such as configuring routine backup or shared hosting for large files, there are GUI tools for accessing S3 API compatible object storage.  
+{% include custom/deprecation.html %}
+
+
+For basic tasks, such as configuring routine backup or shared hosting for large files, there are GUI tools for accessing S3 API compatible object storage.
 
 ### Cyberduck
 
@@ -24,7 +27,7 @@ To use Cyberduck to create a connection to IBM COS and synchronize a folder of l
  1. Download, install, and start Cyberduck.
  2. The main window of the application opens, where you can create a connection to IBM COS. Click **Open Connection** to configure a connection to IBM COS.
  3. A pop-up window opens. From the drop-down menu at the top, select "S3 storage". Enter information into the following fields, and then click Connect:
- 
+
  	– Server: enter the nearest endpoint of IBM COS
  	– Access Key ID
  	– Secret Access Key
@@ -47,6 +50,3 @@ Cloudberry is a flexible backup utility that allows users to back up some or all
 {% include note.html content="When configuring Cloudberry, select 'S3 Compatible' from the list of options, not 'Amazon S3' or 'SoftLayer'." %}
 
 {% include warning.html content="The current release of the Cloudberry Client for Windows uses TLSv1.0 for establishing secure data transmission over the public Internet.  IBM Cloud requires the more modern TLSv1.1 or TLSv1.2 to establish a secure connection. Connections from the Cloudberry Client for Windows will fail unless the 'Use SSL' box is left **unchecked** during configuration." %}
-
-
-

@@ -1,14 +1,18 @@
 ---
 title: Web Gallery Tutorial
-keywords: 
+keywords:
 last_updated: November 18, 2016
 tags:
-summary: 
+summary:
 sidebar: crs_sidebar
 permalink: gallery-tutorial
 folder: getting-started
 toc: True
+redirect_to:
+  - https://console.bluemix.net/docs/services/ibm-cos/index.html
 ---
+
+{% include custom/deprecation.html %}
 
 # Tutorial: Image Gallery
 
@@ -654,6 +658,3 @@ the Deploy Stage in our Delivery Pipeline
 ![commitupdates](https://cloud.githubusercontent.com/assets/19173079/24822835/0a6cdd66-1bbe-11e7-89ee-d57b8d64d4db.jpg)
 
 ![pipeline_triggled_aftersync](https://cloud.githubusercontent.com/assets/19173079/24822828/f29efe26-1bbd-11e7-8b9a-c472ea03ee2b.jpg)
-
- 
-
