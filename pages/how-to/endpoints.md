@@ -11,7 +11,7 @@ redirect_from:
   - /crs-endpoints.html
 folder: how-to
 redirect_to:
-  - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastinfrastructure/endpoints.html
+  - https://console.bluemix.net/docs/infrastructure/cloud-object-storage-infrastructure/endpoints.html
 ---
 
 {% include custom/deprecation.html %}
