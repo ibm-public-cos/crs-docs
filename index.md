@@ -8,7 +8,7 @@ redirect_from:
   - /crs-other-offerings
   - /crs-other-offerings.html
 redirect_to:
-  - https://cloud.ibm.com/docs/cloud-object-storage-infrastructure
+  - https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage#iaas
 summary:
 toc: false
 ---
